@@ -10,7 +10,10 @@ YelpAnalytics provides a more in depth representation of a business' popularity 
 
 In YelpAnalytics, users will be able to:
 
-- [ ] Search for a business by location and category, identical to the Yelp search function 
+- [ ] Search for a business by location and category, identical to the Yelp search function
+- [ ] Select data visualization for the given business' number of ratings per month or year
+- [ ] Select data visualization for the given business' average rating over time 
+- [ ] Vary the time period over which the data visualization is displayed, by date and duration (e.g. August 2013 - February 2015)
 
 ## Wireframes
 
