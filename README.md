@@ -23,7 +23,7 @@ The search sidebar will be identical in function and aesthetic to the Yelp searc
 
 The graphing canvas will include dropdown selection menus for both the graph display options (i.e. review frequency or average rating), and the graphed time period (i.e. start and end times).
 
-![wireframe](https://github.com/JordanYu4/yelp_analytics/wireframes/yelp_analytics_lite.png)
+![wireframe](https://github.com/JordanYu4/yelp_analytics/blob/master/wireframes/yelp_analytics_lite.png)
 
 ## Architecture and Technologies
 
