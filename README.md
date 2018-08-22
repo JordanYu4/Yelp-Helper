@@ -67,4 +67,4 @@ The application structure and logic will be contained within the following scrip
 
 ## Bonus Features
 
-- [ ] Integrate with the Google Maps API in order to represent shifts in business performance by neighborhood and city.
+- [ ] Integrate the `D3` library in order to render more sophisticated dtat visualizations
