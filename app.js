@@ -1,10 +1,10 @@
 // Customize with desired paths and API
 
-const express = require('express')
-const app = express()
-const path = require('path')
-const fetch = require('node-fetch')
-const PORT = process.env.PORT || 8000; // process.env accesses heroku's environment variables
+const express = require('express');
+const app = express();
+const path = require('path');
+const fetch = require('node-fetch');
+const PORT = process.env.PORT || 3000; // process.env accesses heroku's environment variables
 
 app.use(express.static('public'))
 

@@ -4,62 +4,12 @@
     <link rel="stylesheet" href="./stylesheets/main.scss">
     <meta charset="utf-8">
     <title>YelpHelper</title>
-    <script type="text/javascript" src="./bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
   </head>
   <body>
-    <main id='main'></main>
-    <canvas id="yelpChart" width="400" height="400"></canvas>
-    <script>
-      let yelpChart = document.getElementById('yelpChart').getContext('2d');
-      // Global Options
-      Chart.defaults.global.defaultFontFamily = 'Lato';
-      Chart.defaults.global.defaultFontSize = 18;
-      Chart.defaults.global.defaultFontColor = '#777';
-      let yelpChart = new Chart(myChart, {
-        type:'scatter',
-        datasets:{
-          labels: [],
-          data: [],
-          backgroundColor = [],
-          borderWidth:1,
-          borderColor:'#777',
-          hoverBorderWidth:3,
-          boverBorderColor:'#000'
-        },
-        options: {
-          title: {
-            display: true,
-            text: 'YelpHelper',
-            fontSize: 24;
-          },
-          legend: {
-            display: false,
-            position: 'right',
-            labels: {
-              // fontColor: '#000';
-            }
-          },
-          layout: {
-            padding: {
-              left: 0,
-              right: 0,
-              top: 0,
-              bottom: 0
-            }
-          },
-          tooltips: {
-            enabled: true
-          },
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true
-              }
-            }]
-          }
-        }
-      });
-    </script>
+    <main id='main'>
+      <canvas width="400" height="200" id="yelpChart"></canvas>
+      <script type="application/javascript" src="./bundle.js"></script>
+    </main>
   </body>
 </html>

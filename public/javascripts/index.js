@@ -1,11 +1,13 @@
 const axios = require('axios');
+import yelpChart from './chart.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    console.log(yelpChart);
+    
     let isbn = '0201558025';
     axios.get(`/books/${isbn}`)
     .then((response) => {
-        console.log(response); 
+        console.log(response);
     })
     .catch(function (error) {
         console.log(error);
@@ -19,5 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(function (error) {
         console.log(error);
     });
-    
+
 })
