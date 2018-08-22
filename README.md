@@ -1,19 +1,18 @@
-# YelpAnalytics - an economic data visualization tool  
+# YelpHelper - a tool for making faster decisions
 
 ## Background and Overview
 
-A simple glance at the average Yelp rating of a restaurant or business provides a helpful, but limited understanding of its quality of service. The restaurant industry is especially notorious for its unpredictability, with even well-rated establishments being nonetheless vulnerable to the vicissitudes of market and social trends.
+Much time is spent clicking around a map of Yelp search results, figuring out which business is of good quality, while still being within a reasonable distance.
 
-YelpAnalytics provides a more in depth representation of a business' popularity and average rating over time, thereby enabling users to make more accurate projections of a business' growth trajectory.
+YelpHelper provides a data visualization of businesses plotted by their average rating versus distance to the user's current location, thereby enabling users to make more quicker, more informed decisions in which businesses they visit.
 
 ## Functionality & MVP
 
 In YelpAnalytics, users will be able to:
 
 - [ ] Search for a business by location and category, identical to the Yelp search function
-- [ ] Select data visualization for the given business' number of ratings per month or year
-- [ ] Select data visualization for the given business' average rating over time
-- [ ] Vary the time period over which the data visualization is displayed, by date and duration (e.g. August 2013 - February 2015)
+- [ ] Select the maximum distance they are willing to travel
+- [ ] Select plotted points to view business details
 
 ## Wireframes
 
@@ -21,7 +20,7 @@ The app will consist of a single page with the business search sidebar, graphing
 
 The search sidebar will be identical in function and aesthetic to the Yelp search bar.
 
-The graphing canvas will include dropdown selection menus for both the graph display options (i.e. review frequency or average rating), and the graphed time period (i.e. start and end times).
+The graphing canvas will include include plotted points representing businesses. Selecting a point on the graph will open up a modal providing additional business details.
 
 ![wireframe](https://github.com/JordanYu4/yelp_analytics/blob/master/wireframes/yelp_analytics_lite.png)
 
@@ -30,7 +29,7 @@ The graphing canvas will include dropdown selection menus for both the graph dis
 The project will be implemented with the following technologies:
 
 * Vanilla JavaScript for overall structure and logic,
-* `HTML5 Canvas` and `D3` libraries for DOM manipulation and rendering,
+* `HTML5 Canvas` and `Chart.js` libraries for DOM manipulation and rendering,
 * Webpack to bundle and serve the necessary scripts
 
 The application structure and logic will be contained within the following scripts:
@@ -64,7 +63,6 @@ The application structure and logic will be contained within the following scrip
 
 **Day 4:** Install graph options to provide custom data visualization. Style the frontend, making it clean and professional. Goals for the day:
 
-- [ ] Create dropdown menus for data options and time periods
 - [ ] Complete styling for `Canvas`, with intuitive controls and title
 
 ## Bonus Features
