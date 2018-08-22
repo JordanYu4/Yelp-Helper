@@ -8,7 +8,7 @@ YelpHelper provides a data visualization of businesses plotted by their average 
 
 ## Functionality & MVP
 
-In YelpAnalytics, users will be able to:
+In YelpHelper, users will be able to:
 
 - [ ] Search for a business by location and category, identical to the Yelp search function
 - [ ] Select the maximum distance they are willing to travel
@@ -30,7 +30,8 @@ The project will be implemented with the following technologies:
 
 * Vanilla JavaScript for overall structure and logic,
 * `HTML5 Canvas` and `Chart.js` libraries for DOM manipulation and rendering,
-* Webpack to bundle and serve the necessary scripts
+* `Node` along with `Express` and `Axios` for a simple backend,
+* `Webpack` to bundle and serve the necessary scripts
 
 The application structure and logic will be contained within the following scripts:
 
@@ -64,6 +65,7 @@ The application structure and logic will be contained within the following scrip
 **Day 4:** Install graph options to provide custom data visualization. Style the frontend, making it clean and professional. Goals for the day:
 
 - [ ] Complete styling for `Canvas`, with intuitive controls and title
+- [ ] Clean up file tree
 
 ## Bonus Features
 
