@@ -41,7 +41,7 @@ The application structure and logic will be contained within the following scrip
 
 `extract.js`: this script will handle requesting the necessary data from the Yelp APIs and pass it on to the graphing logic  
 
-`graph.js`: this script will handle the logic for creating and rendering the requested graph
+`chart.js`: this script will handle the logic for creating and rendering the requested graph
 
 ## Implementation Timeline
 
