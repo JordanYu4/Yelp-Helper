@@ -19,6 +19,12 @@ let yelpChart = new Chart(ctx, {
       }, {
         x: 10,
         y: 5
+      }, {
+        x: 4,
+        y: 15
+      }, {
+        x: 7,
+        y: 22
       }],
       pointRadius: 3,
       pointHitRadius: 4,
@@ -32,7 +38,7 @@ let yelpChart = new Chart(ctx, {
   options: {
     title: {
       display: true,
-      text: 'YelpHelper',
+      text: 'Businesses nearby',
       fontSize: 24
     },
     scales: {
@@ -44,6 +50,7 @@ let yelpChart = new Chart(ctx, {
         }
       }],
       yAxes: [{
+
         type: 'linear',
         position: 'left',
         ticks: {

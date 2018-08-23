@@ -1,5 +1,12 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: rgba(211, 35, 35, 0.9);
+}
 
+header a {
+  text-decoration: none;
 }
