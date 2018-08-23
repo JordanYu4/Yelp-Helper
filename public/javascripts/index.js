@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('searchRequest:', searchRequest);
 
-    axios.get(`/search?${searchRequest}`)
+    axios.get(`/search`, searchRequest)
     .then((response) => {
         console.log(response);
     })
-    .catch(function (err) {
-        console.log(err);
-    });
+    // .catch(function (err) {
+    //     console.log(err);
+    // });
 
 })

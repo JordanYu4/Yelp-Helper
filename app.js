@@ -5,8 +5,16 @@ const app = express();
 const path = require('path');
 const fetch = require('node-fetch');
 const PORT = process.env.PORT || 3000; // process.env accesses heroku's environment variables
+const bodyParser = require('body-parser');
 
 app.use(express.static('public'))
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.use(function (req, res) {
+  res.setHeader('Content-Type', 'text/plain')
+  res.write('you posted:/n')
+  res.end(JSON.stringify(req.body, null, 2))
+})
 
 app.get('/', (request, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'))
@@ -34,15 +42,23 @@ app.get('/search', (request, response) => {
   // const limit = 10;
   console.log('Running backend get');
   console.log('request', request);
-  let searchParams = JSON.parse(request.params);
-  client.search(searchParams)
-  .then((response) => {
-      return response.text();
-  }).then((body) => {
-      let results = JSON.parse(body)
-      console.log(results)
-      response.send(results)
-    });
+  // let searchParams = JSON.parse(request.params);
+
+  //TESTING BEGIN
+  let testParams = {
+    term: 'cafe',
+    location: 'san francisco, ca'
+  };
+  // TESTING END
+
+  // client.search(request) //yelp fusion method compatibility issue?
+  // .then((response) => {
+  //   return {}; // response.text();
+  // }).then((body) => {
+  //   let results = JSON.parse(body)
+  //   console.log(results)
+  //   response.send(results)
+  // });
 });
 
 app.listen(PORT, () => {
