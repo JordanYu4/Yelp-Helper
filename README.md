@@ -51,9 +51,9 @@ The application structure and logic will be contained within the following scrip
 
 **Day 2:** Set up necessary Node modules (including webpack). Create a `webpack.config.js` and a `package.json`. Write an entry file and set up boilerplate for the aforementioned scripts. Goals for the day:
 
-- [ ] Get `webpack` serving files and set up index.html
-- [ ] Become familiar enough with `Canvas` to render a basic graph
-- [ ] Set up a simple Node backend
+- [x] Get `webpack` serving files and set up index.html
+- [x] Become familiar enough with `Canvas` and `Chart.js` to render a basic graph
+- [x] Set up a simple Node backend
 - [ ] Become familiar with making requests to the Yelp Fusion and GraphQL APIs
 
 **Day 3:** Create the logic backend. Goals for the day:
