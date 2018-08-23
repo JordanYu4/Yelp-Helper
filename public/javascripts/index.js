@@ -17,6 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
       location: 'san francisco, ca'
     };
 
+    // let term = '';
+    // let location = '';
+    // let latitude = '';
+    // let longitude = '';
+    // let radius = '';
+    // let open_now = '';
+    // const limit = 10;
+
     console.log('searchParams:', searchParams);
 
     let searchRequest = JSON.stringify(searchParams);
@@ -27,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((response) => {
         console.log(response);
     })
-    // .catch(function (err) {
-    //     console.log(err);
-    // });
+    .catch(function (err) {
+        console.log(err);
+    });
 
 })
