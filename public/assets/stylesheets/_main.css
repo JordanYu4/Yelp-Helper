@@ -74,13 +74,6 @@ main {
   padding: 12px 0 12px;
 }
 
-.search-form-divider {
-  display: none;
-  font-size: 28px;
-  font-weight: 100;
-  color: rgba(200, 200, 200, 1);
-}
-
 .search-form label {
   font-size: 18px;
   font-weight: 700;

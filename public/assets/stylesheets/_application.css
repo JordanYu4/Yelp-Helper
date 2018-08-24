@@ -3,7 +3,8 @@ html, body {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 14px;
   margin: 0;
   background: url(../images/shakshuka_brunch.png);
   background-size: cover;

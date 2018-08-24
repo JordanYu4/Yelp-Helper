@@ -1,7 +1,7 @@
 let ctx = document.getElementById("yelpChart").getContext('2d');
 
 // Global Options
-Chart.defaults.global.defaultFontFamily = 'Arial';
+Chart.defaults.global.defaultFontFamily = 'Helvetica Neue';
 Chart.defaults.global.defaultFontSize = 18;
 Chart.defaults.global.defaultFontColor = '#888';
 
