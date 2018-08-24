@@ -3,15 +3,36 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 25px 0;
   box-sizing: border-box;
   background: rgba(211, 35, 35, 0.9);
   color: #fff;
 }
 
+header h1 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
 header a {
   text-decoration: none;
+  display: inline-block;
+  padding-top: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+a.github-link {
+  background-image: url("../images/github-icon.png");
+  background-size: 36px 36px;
+  padding-right: 10px;
+}
+
+a.linkedin-link {
+  background-image: url("../images/linkedin-icon.png");
+  background-size: 48px 36px;
 }
 
 main {
@@ -26,11 +47,16 @@ main {
 }
 
 .search-bar {
-  /* width: 500px; */
-  padding: 12px 12px 12px;
+  padding-left: 12px;
   margin-bottom: 15px;
   background: #fff;
+  border: none;
   border-radius: 3px;
+  /* word-wrap: none; */
+}
+
+.search-form * {
+  padding: 12px 0 12px;
 }
 
 .search-bar label {
@@ -49,16 +75,25 @@ main {
 }
 
 input.submit-button {
-  width: 80px;
-  height: 100%;
-  margin: none;
+  display: inline-block;
+  /* vertical-align: middle; */
   background: rgba(211, 35, 35, 1);
+  background-image: url("../images/search_sprite.png");
+  background-size: 24px 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  width: 50px;
+  border-radius: 0 3px 3px 0;
 }
 
-.submit-button:hover {
+input.submit-button:hover {
   background: rgba(190, 32, 32, 1);
+  background-image: url("../images/search_sprite.png");
+  background-size: 24px 24px;
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
-  padding: none;
 }
 
 .data-vis {
