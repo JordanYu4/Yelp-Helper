@@ -17,11 +17,13 @@ header h1 {
 header a {
   text-decoration: none;
   display: inline-block;
+  color: rgba(0, 0, 0, 0);
   padding-top: 32px;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
   vertical-align: middle;
+  transition: 0.05s;
 }
 
 a.github-link {
@@ -30,9 +32,17 @@ a.github-link {
   padding-right: 10px;
 }
 
+a.github-link:hover {
+  background-size: 37px 37px;
+}
+
 a.linkedin-link {
   background-image: url("../images/linkedin-icon.png");
   background-size: 48px 36px;
+}
+
+a.linkedin-link:hover {
+  background-size: 49px 37px;
 }
 
 main {
@@ -55,15 +65,31 @@ main {
   /* word-wrap: none; */
 }
 
+.search-form {
+  border-right: 1px solid rgba(190, 32, 32, 1);
+  border-radius: 3px;
+}
+
 .search-form * {
   padding: 12px 0 12px;
 }
 
-.search-bar label {
+.search-form-divider {
+  display: none;
+  font-size: 28px;
+  font-weight: 100;
+  color: rgba(200, 200, 200, 1);
+}
+
+.search-form label {
   font-size: 18px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.7);
-  padding-right: 5px;
+  padding: 0 5px 0;
+}
+
+.search-form label:first-child {
+  border-right: 1px solid rgba(220, 220, 220, 1);
 }
 
 .search-bar input {
@@ -83,6 +109,7 @@ input.submit-button {
   background-position: center;
   background-repeat: no-repeat;
   vertical-align: bottom;
+  box-sizing: border-box;
   width: 50px;
   border-radius: 0 3px 3px 0;
 }
