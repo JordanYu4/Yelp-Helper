@@ -4,23 +4,47 @@
     <meta charset="utf-8">
     <title>YelpHelper</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-    <link rel="stylesheet" href="./stylesheets/_main.css">
-    <link rel="stylesheet" href="./stylesheets/_application.css">
+    <link rel="stylesheet" href="./assets/stylesheets/_main.css">
+    <link rel="stylesheet" href="./assets/stylesheets/_application.css">
   </head>
   <body>
-    <main id='main'>
-      <header class="page-header">
-        <h1>YelpHelper</h1>
-        <nav class="nav-links">
-          <a href="https://github.com/JordanYu4" class="github-link">Github</a>
-          &nbsp;|&nbsp;
-          <a href="https://www.linkedin.com/in/jordan-yu-a7119b80/"
-             class="linkedin-link"
-          >LinkedIn</a>
-        </nav>
-      </header>
-      <canvas width="400" height="200" id="yelpChart"></canvas>
-      <script type="application/javascript" src="./bundle.js"></script>
+    <header class="page-header">
+      <h1>YelpHelper</h1>
+
+      <nav class="nav-links">
+        <a href="https://github.com/JordanYu4" class="github-link">Github</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/jordan-yu-a7119b80/"
+        class="linkedin-link"
+        >LinkedIn</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="search-bar">
+        <form id="search-form" class="search-form" action="/search" method="POST">
+          <label for="term">
+            <span class="search-label">Find&nbsp;</span>
+            <input id="term" type="text" name="term" placeholder="burgers, barbers, spas, handymen...">
+          </label>
+          <label for="location">
+            <span class="search-label">Near&nbsp;</span>
+            <input id="location" type="text" name="location" placeholder="address, neighborhood, city, state or zip">
+          </label>
+          <input class="submit-button" type="submit" value="Search">
+        </form>
+      </div>
+
+      <br/>
+
+      <div class="data-vis">
+        <div class="search-results">
+
+        </div>
+
+        <canvas class="canvas" id="yelpChart"></canvas>
+        <script type="application/javascript" src="./bundle.js"></script>
+      </div>
     </main>
   </body>
 </html>
