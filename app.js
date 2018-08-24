@@ -8,13 +8,15 @@ const PORT = process.env.PORT || 3000; // process.env accesses heroku's environm
 const bodyParser = require('body-parser');
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(function (req, res) {
-  res.setHeader('Content-Type', 'text/plain')
-  res.write('you posted:\n')
-  res.end(JSON.stringify(req.body, null, 2))
-});
+
+// Body Parser middleware
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+// app.use(function (req, res) {
+//   res.setHeader('Content-Type', 'text/plain')
+//   res.write('you posted:\n')
+//   res.end(JSON.stringify(req.body, null, 2))
+// });
 
 app.get('/', (request, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'))
@@ -32,31 +34,41 @@ const client = yelp.client(apiKey);
 //   console.log(err);
 // });
 
-app.get('/search', (request, response) => {
+// app.get('/search', (request, response) => {
+//
+//   client.search(request).then(response => {
+//     return response.jsonBody.businesses;
+//   }).then(body => {
+//     let cleanJson = JSON.stringify(body, null, 4);
+//     // let results = JSON.parse(body);
+//     console.log(cleanJson);
+//     response.send(cleanJson);
+//   }).catch(err => {
+//     console.log(err);
+//   })
+//
+// });
 
-  console.log('request', request);
-  // let searchParams = JSON.parse(request.params);
+// Rewriting app.get
 
-  //TESTING BEGIN
-  let testParams = {
-    term: 'cafe',
-    location: 'san francisco, ca'
-  };
-  // TESTING END
-  console.log(testParams);
-  client.search(testParams) //yelp fusion method compatibility issue?
-  .then((response) => {
-    return response.text();
-  }).then((body) => {
-    let results = JSON.parse(body);
-    console.log(results);
-    response.send(results);
+app.get('/search', (req, res) => {
+  let searchResults = [];
+  client.search(req.query).then(response => {
+    response.jsonBody.businesses.forEach(business => { // refactor w/ for loop
+      let searchResult = {
+        "name": business.name,
+        "url": business.url,
+        "reviewCount": business.review_count,
+        "rating": business.rating,
+        "address": business.location
+      };
+      searchResults.push(searchResult);
+    })
+    console.log("SEARCH RESULT START", searchResults, "SEARCH RESULT END");
+    res.send(searchResults);
+  }).catch(err => {
+    console.log(err);
   });
-});
-
-app.listen(PORT, () => {
-  console.log(__dirname);
-  console.log(`listening on ${PORT}`)
 })
 
 /////////////////////////////
@@ -73,3 +85,10 @@ app.get('/books/:isbn', (request, response) => {
       response.send(results) // sends to frontend
     });
 });
+
+///////////////////////////////
+
+app.listen(PORT, () => {
+  console.log(__dirname);
+  console.log(`listening on ${PORT}`)
+})

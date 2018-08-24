@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // });
 
     let searchParams = {
-      term: 'cafe',
+      term: 'four barrel coffee',
       location: 'san francisco, ca'
     };
 
@@ -25,11 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // let open_now = '';
     // const limit = 10;
 
-    console.log('searchParams:', searchParams);
-
     let searchRequest = JSON.stringify(searchParams);
-
-    console.log('searchRequest:', searchRequest);
 
     axios.get(`/search`, searchRequest)
     .then((response) => {
@@ -37,6 +33,29 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(function (err) {
         console.log(err);
+    });
+
+    ////////////////////////
+    document.addEventListener("submit", e => {
+      e.preventDefault();
+      const searchForm = document.getElementById("search-form");
+      const newSearch = searchInput(searchForm); // declare as var outside of DOMContentLoaded?
+      $.ajax({
+        url: "/yelp",
+        type: "get",
+        success: response => {
+          console.log("Retrieving response...");
+          return response;
+        }
+      });
+
+      // chart rendering logic?
+
+    });
+
+    const searchInput = form => ({
+      location: form[0].value,
+      term: form[1].value
     });
 
 })
