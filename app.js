@@ -19,7 +19,7 @@ app.use(express.static('public'));
 // });
 
 app.get('/', (request, res) => {
-  res.sendFile(path.join(__dirname, './public/index.html'))
+  res.sendFile(path.join(__dirname, './index.html'))
 });
 
 const yelp = require('yelp-fusion');
