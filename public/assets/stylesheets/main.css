@@ -23,7 +23,6 @@ header a {
   background-repeat: no-repeat;
   overflow: hidden;
   vertical-align: middle;
-  transition: 0.05s;
 }
 
 a.github-link {
