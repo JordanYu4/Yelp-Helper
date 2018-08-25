@@ -19,10 +19,6 @@ This README covers the following:
 * Users can search for local businesses
 * Users can select points on the data plot for more business details
 
-### Visualizing Yelp search results
-
-
-
 ### Seamless application aesthetic
 
 As an application intended to complement the Yelp application. As such, it is important for YelpHelper's layout design to create in users a close mental association with the original Yelp application. Similar formatting, layout, color schemes, and fonts were utilized in styling YelpHelper in order to provide the least disruptive transition for the user.
