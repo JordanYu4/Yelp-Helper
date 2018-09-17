@@ -7,6 +7,8 @@ const fetch = require('node-fetch');
 const PORT = process.env.PORT || 3000; // process.env accesses heroku's environment variables
 const bodyParser = require('body-parser');
 
+const apiKey = require('./config/key');
+
 app.use(express.static('public'));
 
 // Body Parser middleware
