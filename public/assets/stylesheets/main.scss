@@ -9,20 +9,24 @@ header {
   color: #fff;
 }
 
-header h1 {
-  font-size: 32px;
-  font-weight: 900;
-}
-
 header a {
   text-decoration: none;
   display: inline-block;
   color: rgba(0, 0, 0, 0);
-  padding-top: 32px;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
   vertical-align: middle;
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+  }
+  
+  .nav-links {
+    padding-top: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
 }
 
 a.github-link {
