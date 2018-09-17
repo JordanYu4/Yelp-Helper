@@ -3,9 +3,9 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
-  entry: "./public/javascripts/index.js",
+  entry: path.join(__dirname, "./public/javascripts/index.js"),
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, "./public"),
     filename: "bundle.js"
   },
   module: {
