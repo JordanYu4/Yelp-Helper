@@ -1,0 +1,11 @@
+.data-vis {
+  display: flex;
+  flex-direction: row;
+  background: rgba(248, 249, 249, 1);
+  border-radius: 5px;
+}
+
+.canvas {
+  width: 70vw;
+  height: 50vw;
+}
