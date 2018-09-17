@@ -3,52 +3,51 @@
   <head>
     <meta charset="utf-8">
     <title>YelpHelper</title>
-    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./public/assets/stylesheets/main.css">
-    <link rel="stylesheet" href="./public/assets/stylesheets/application.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
   </head>
   <body>
     <header class="page-header">
       <h1>YelpHelper</h1>
-
+      
       <nav class="nav-links">
         <a href="https://github.com/JordanYu4"
-           class="github-link">
-           Github
-        </a>
-        <a href="https://www.linkedin.com/in/jordan-yu-a7119b80/"
-           class="linkedin-link">
-           LinkedIn
-        </a>
-      </nav>
-    </header>
+        class="github-link"
+        target="_blank">
+        Github
+      </a>
+      <a href="https://www.linkedin.com/in/jordan-yu-a7119b80/"
+      class="linkedin-link"
+      target="_blank">
+      LinkedIn
+      </a>
+    </nav>
+  </header>
 
-    <main class="main">
-      <div class="search-bar">
-        <form id="search-form" class="search-form" action="/search" method="POST">
-          <label for="term">
-            <span class="search-label">Find&nbsp;</span>
-            <input id="term" type="text" name="term" placeholder="burgers, barbers, spas, handymen...">
-          </label>
-          <label for="location">
-            <span class="search-label">&nbsp;&nbsp;Near&nbsp;</span>
-            <input id="location" type="text" name="location" placeholder="address, neighborhood, city, state or zip">
-          </label>
-          <input class="submit-button" type="submit" value="">
-        </form>
+  <main class="main">
+    <div class="search-bar">
+      <form id="search-form" class="search-form" action="/search" method="POST">
+        <label for="term">
+          <span class="search-label">Find&nbsp;</span>
+          <input id="term" type="text" name="term" placeholder="burgers, barbers, spas, handymen...">
+        </label>
+        <label for="location">
+          <span class="search-label">&nbsp;&nbsp;Near&nbsp;</span>
+          <input id="location" type="text" name="location" placeholder="address, neighborhood, city, state or zip">
+        </label>
+        <input class="submit-button" type="submit" value="">
+      </form>
+    </div>
+    
+    <br/>
+    
+    <div class="data-vis">
+      <div class="search-results">
+        
       </div>
-
-      <br/>
-
-      <div class="data-vis">
-        <div class="search-results">
-
-        </div>
-
-        <canvas class="canvas" width="800" height="400" id="yelpChart"></canvas>
-        <script type="application/javascript" src="./public/bundle.js"></script>
-      </div>
-    </main>
-  </body>
+      
+      <canvas class="canvas" width="800" height="400" id="yelpChart"></canvas>
+    </div>
+  </main>
+  
+</body>
 </html>

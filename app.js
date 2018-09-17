@@ -25,7 +25,6 @@ app.get('/', (request, res) => {
 });
 
 const yelp = require('yelp-fusion');
-const apiKey = 'huQiSGsewH8ew7hJEyRu_PWL0x9Syg2tWgL9R3fe7eF0XlfKkfkcHexE16XOBWssNWOrhiibXeHQsVAY5TLVnxh2XHtdIbhq9Zr08HuZQuz1xZqIRBsB8vG90ER8W3Yx'
 const client = yelp.client(apiKey);
 
 // client.search(searchRequest).then(response => {

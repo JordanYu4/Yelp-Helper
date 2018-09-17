@@ -1,9 +1,11 @@
+@import 'partials/variables';
+
 html, body {
   height: 100%;
 }
 
 body {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: $montserrat;
   font-size: 14px;
   margin: 0;
   background: url(../images/shakshuka_brunch.png);

@@ -1,6 +1,8 @@
 const axios = require('axios');
 import yelpChart from './chart.js';
 
+import '../assets/stylesheets/index.scss';
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // let isbn = '0201558025';
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
       term: 'four barrel coffee',
       location: 'san francisco, ca'
     };
+
+    console.log('running index.js');
 
     // let term = '';
     // let location = '';
