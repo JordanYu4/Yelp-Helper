@@ -1,3 +1,5 @@
+// import chartData from '../app.js';
+
 let ctx = document.getElementById("yelpChart").getContext('2d');
 
 // Global Options
