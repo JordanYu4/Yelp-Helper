@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
       location: 'san francisco, ca'
     };
 
-    console.log('running index.js');
-
     // let term = '';
     // let location = '';
     // let latitude = '';

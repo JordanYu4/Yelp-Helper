@@ -1,49 +1,63 @@
 header {
-  display: flex;
+  position: fixed;
   width: 100%;
+  height: 90px;
+  top: 0;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px 0;
+  padding: 25px;
   box-sizing: border-box;
   background: rgba(211, 35, 35, 0.9);
   color: #fff;
-}
 
-header a {
-  text-decoration: none;
-  display: inline-block;
-  color: rgba(0, 0, 0, 0);
-  vertical-align: middle;
+  a {
+    text-decoration: none;
+    // color: rgba(0, 0, 0, 0);
+  }
   
-  h1 {
+  .page-title {
     font-size: 32px;
     font-weight: 400;
     color: #fff;
   }
+
+  .nav-links {
+    animation-delay: 0.5s;
+    
+    [class^="social-media-link-"] {
+      display: inline-block;
+      background-repeat: no-repeat;
+      padding-top: 37px;
+    }
+    
+    .social-media-link-github {
+      padding-right: 15px;
+      background-image: url("../images/github-icon.png");
+      width: 37px;
+      background-size: 36px 36px;
   
-  .nav-link {
-    padding-top: 32px;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+      &:hover {
+        background-size: 37px 37px;
+      }
+    }
+      
+    .social-media-link-linkedin {
+      background-image: url("../images/linkedin-icon.png");
+      width: 49px;
+      background-size: 48px 36px;
+  
+      &:hover {
+        background-size: 49px 37px;
+      }
+    }
   }
 }
 
-a.github-link {
-  background-image: url("../images/github-icon.png");
-  background-size: 36px 36px;
-  padding-right: 10px;
+.header-spacer {
+  width: 100%;
+  height: 90px;
 }
 
-a.github-link:hover {
-  background-size: 37px 37px;
-}
 
-a.linkedin-link {
-  background-image: url("../images/linkedin-icon.png");
-  background-size: 48px 36px;
-}
 
-a.linkedin-link:hover {
-  background-size: 49px 37px;
-}

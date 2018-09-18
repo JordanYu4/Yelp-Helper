@@ -1,14 +1,3 @@
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 1000px;
-  width: 100%;
-  height: 500px;
-  margin: 40px 15px 40px 15px;
-  box-sizing: border-box;
-}
-
 .search-bar {
   padding-left: 12px;
   margin-bottom: 15px;
@@ -67,16 +56,4 @@ input.submit-button:hover {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-}
-
-.data-vis {
-  display: flex;
-  flex-direction: row;
-  background: rgba(248, 249, 249, 1);
-  border-radius: 5px;
-}
-
-.canvas {
-  width: 70vw;
-  height: 50vw;
 }
