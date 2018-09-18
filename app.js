@@ -18,7 +18,6 @@ const apiKey = require('./config/key');
 //   res.end(JSON.stringify(req.body, null, 2))
 // });
 
-
 const yelp = require('yelp-fusion');
 const client = yelp.client(apiKey);
 

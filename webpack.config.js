@@ -35,7 +35,7 @@ const config = {
         use: {
           loader: "file-loader",
           options: {
-            name: "[path][name].[hash].[ext]"
+            name: "loaded_images/[hash].[ext]"
           }
         }
       }
