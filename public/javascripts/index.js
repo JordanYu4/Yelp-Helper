@@ -9,34 +9,35 @@ const formInput = form => ({
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  
-  let isbn = '0201558025';
-
-  axios.get(`/books/${isbn}`)
-  .then((response) => {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+  const searchForm = document.getElementById("search-form");
   
   document.addEventListener("submit", e => {
     e.preventDefault();
-    const searchForm = document.getElementById("search-form");
     const searchParams = formInput(searchForm); 
-    console.log(searchParams);
 
-    axios.get(`/search`, searchParams)
+    // let searchRequest = JSON.stringify(searchParams); 
+
+    axios.get(`/search`, searchParams) // pass searchParams into string interp? 
     .then((response) => {
-        console.log(response);
+      console.log(response);
     })
     .catch(function (err) {
-        console.log(err);
+      console.log(err);
     });
+
+    // send response data to chart.js 
+    // render resulting chart 
+
+    // let isbn = '0201558025';
+    // axios.get(`/books/${isbn}`)
+    // .then((response) => {
+    //   console.log(response);
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
+    
   });
 });
       
-    // chart rendering logic?
-
-    // let searchRequest = JSON.stringify(searchParams); 
 
