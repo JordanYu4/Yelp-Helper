@@ -1,3 +1,5 @@
+import Chart from 'chart.js';
+
 const chartBuilder = chartPoints => {
   let ctx = document.getElementById("yelpChart").getContext('2d');
   
@@ -29,7 +31,7 @@ const chartBuilder = chartPoints => {
           position: 'bottom',
           ticks: {
             beginAtZero: true,
-            max: maxDistance(chartPoints)
+            max: 25
           }
         }],
         yAxes: [{
@@ -58,16 +60,5 @@ const chartBuilder = chartPoints => {
 
   return chart;
 }
-
-const maxDistance = points => {
-  if (points.length === 0) return 25;
-  let max = 0;
-  for (let i = 0; i < points.length; i++) {
-    let distance = points[i].x;
-    if (distance > max) max = distance; 
-    console.log(max);
-  }
-  return Math.ceil(max);
-};
 
 export default chartBuilder;
