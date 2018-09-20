@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       data: searchParams
     })
     .then((response) => {
-      console.log(response);
+      console.log(response.get(data));
     })
     .catch(function (err) {
       console.log(err);

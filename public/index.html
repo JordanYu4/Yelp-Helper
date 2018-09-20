@@ -30,14 +30,16 @@
     <main class="main">
       <div class="search-bar">
         <form id="search-form" class="search-form" action="/search" method="POST">
-          <label for="term">
-            <span class="search-label">Find&nbsp;</span>
-            <input id="term" type="text" name="term" placeholder="burgers, barbers, spas, handymen...">
-          </label>
-          <label for="location">
-            <span class="search-label">&nbsp;&nbsp;Near&nbsp;</span>
-            <input id="location" type="text" name="location" placeholder="current address">
-          </label>
+          <div class="search-input-fields">
+            <label for="term">
+              <span class="search-label">Find&nbsp;</span>
+              <input id="term" type="text" name="term" placeholder="burgers, barbers, spas, handymen...">
+            </label>
+            <label for="location">
+              <span class="search-label">&nbsp;&nbsp;Near&nbsp;</span>
+              <input id="location" type="text" name="location" placeholder="current address">
+            </label>
+          </div>
           <input class="submit-button" type="submit" value="">
         </form>
       </div>

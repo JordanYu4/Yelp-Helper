@@ -5,34 +5,38 @@
   border: none;
   border-radius: 3px;
   /* word-wrap: none; */
+
+  input {
+    max-width: 350px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding-right: 5px;
+  }
 }
 
 .search-form {
   border-right: 1px solid rgba(190, 32, 32, 1);
   border-radius: 3px;
-}
 
-.search-form * {
-  padding: 12px 0 12px;
-}
+  * {
+    padding: 12px 0 12px;
+  }
 
-.search-form label {
-  font-size: 18px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.7);
-  padding: 0 5px 0;
-}
+  .search-input-fields {
+    label {
+      font-size: 18px;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.7);
+      padding: 0 5px 0;
 
-.search-form label:first-child {
-  border-right: 1px solid rgba(220, 220, 220, 1);
-}
+      &:first-child {
+        border-right: 1px solid rgba(220, 220, 220, 1);
+      }
+    }
+  }
+  
 
-.search-bar input {
-  max-width: 350px;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  padding-right: 5px;
 }
 
 input.submit-button {

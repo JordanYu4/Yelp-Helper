@@ -23,21 +23,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Search route 
 
 app.post('/search', (request, response) => {
-  let req = request.body;
-  console.log('searchParams', req);
-  response.json(req); 
-  client.search(req).then(response => {
-    console.log(response);
+  let dataSet = [];
+  client.search(request.body).then(result => {
+    let businesses = result.jsonBody.businesses;
+    for (let i = 0; i <= 4; i++) {
+      let { name, 
+            image_url, 
+            url, 
+            rating, 
+            distance} = businesses[i]; 
+      let business = {name, image_url, url, rating, distance};
+      dataSet.push(business);
+    }
+    response.send(dataSet);
+    // dataSet;
   })
-  // .then(body => {
-  //   let cleanJson = JSON.stringify(body, null, 4);
-  //   // let results = JSON.parse(body);
-  //   console.log(cleanJson);
-  //   response.json(req.body);
-  // })
-  // .catch(err => {
-  //   console.log(err);
-  // })
+  .catch(err => {
+    console.log(err);
+  })
 });
             
 // app.get('/search', (req, res) => {
