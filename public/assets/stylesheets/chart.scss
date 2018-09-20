@@ -4,6 +4,7 @@
   width: 70vw;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   background: rgba(248, 249, 249, 1);
   border-radius: 5px;
   font-family: $montserrat;
@@ -23,10 +24,11 @@
       font-size: 16px;
       padding: 1em;
     }
-    
+
     canvas {
       width: 100%;
-      padding: 5px;
+      padding: 15px;
+      box-sizing: border-box;
       // height: 50vw;
     }
   }

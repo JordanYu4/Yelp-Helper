@@ -52,9 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
       chartPoints.push(point);
     }
 
-    console.log("chartPoints:", chartPoints);
-    
     yelpChart.data.datasets[0].data = chartPoints;
+    yelpChart.data.datasets[0].businesses = businessData;
     yelpChart.options.scales.xAxes[0].ticks.max = maxDistance(chartPoints);
     yelpChart.update();
     console.log(yelpChart);

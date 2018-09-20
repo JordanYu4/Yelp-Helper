@@ -21,7 +21,8 @@ const chartBuilder = chartPoints => {
         borderWidth: 1,
         borderColor: 'red',
         hoverBorderWidth: 2,
-        hoverBorderColor: '#777'
+        hoverBorderColor: '#777',
+        businesses: []
       }]
     },
     options: {
@@ -42,7 +43,7 @@ const chartBuilder = chartPoints => {
             max: 5,
             stepSize: 1,
             callback: function(value, index, values) {
-              return value + ' ⭐';
+              return value;
             }
           }
         }]
@@ -53,7 +54,16 @@ const chartBuilder = chartPoints => {
         fontColor: '#000'
       },
       tooltips: {
-        enabled: true
+        callbacks: {
+          label: function(tooltipItem, data) {
+            let idx = tooltipItem.index;
+            let business = data.datasets[tooltipItem.datasetIndex].businesses[idx];
+            return [
+              business.name, 
+              'Rating: ' + business.rating
+            ];
+          }
+        }
       }
     }
   });
