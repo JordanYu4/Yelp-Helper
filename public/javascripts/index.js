@@ -1,5 +1,5 @@
 const axios = require('axios');
-import yelpChart from './chart.js';
+import chartBuilder from './chart.js';
 
 import '../assets/stylesheets/index.scss';
 
@@ -12,6 +12,7 @@ const chartPoints = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.getElementById("search-form");
+  let yelpChart = chartBuilder(chartPoints);
   
   document.addEventListener("submit", async function(e) {
     e.preventDefault();
@@ -33,15 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < businessData.length; i++) {
       let business = businessData[i];
       let point = {
-        x: business.distance / 1000,
+        x: (business.distance / 1000).toFixed(2),
         y: business.rating
       };
       chartPoints.push(point);
     }
 
     console.log("chartPoints:", chartPoints);
- 
+    
+    yelpChart = chartBuilder(chartPoints);
   });
 });
       
-export default chartPoints;

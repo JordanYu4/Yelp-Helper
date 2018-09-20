@@ -16,7 +16,7 @@ app.post('/search', (request, response) => {
   let dataSet = [];
   client.search(request.body).then(result => {
     let businesses = result.jsonBody.businesses;
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i <= 9; i++) {
       let { name, 
             image_url, 
             url, 
