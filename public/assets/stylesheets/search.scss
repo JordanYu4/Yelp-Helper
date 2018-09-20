@@ -1,13 +1,8 @@
 .search-bar {
-  padding-left: 12px;
+  // width: 80vw;
   margin-bottom: 15px;
-  background: #fff;
-  border: none;
-  border-radius: 3px;
-  /* word-wrap: none; */
-
+  
   input {
-    max-width: 350px;
     font-size: 18px;
     border: none;
     outline: none;
@@ -16,14 +11,15 @@
 }
 
 .search-form {
-  border-right: 1px solid rgba(190, 32, 32, 1);
+  display: flex;
   border-radius: 3px;
-
-  * {
-    padding: 12px 0 12px;
-  }
-
+  
   .search-input-fields {
+    background: #fff;
+    padding: 12px 0 12px 12px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+
     label {
       font-size: 18px;
       font-weight: 700;
@@ -35,8 +31,6 @@
       }
     }
   }
-  
-
 }
 
 input.submit-button {
@@ -51,13 +45,14 @@ input.submit-button {
   box-sizing: border-box;
   width: 50px;
   border-radius: 0 3px 3px 0;
+
+  &:hover {
+    background: rgba(190, 32, 32, 1);
+    background-image: url("../images/search_sprite.png");
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
 }
 
-input.submit-button:hover {
-  background: rgba(190, 32, 32, 1);
-  background-image: url("../images/search_sprite.png");
-  background-size: 24px 24px;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}

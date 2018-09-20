@@ -1,4 +1,4 @@
-// import chartData from '../app.js';
+import chartPoints from './index.js';
 
 let ctx = document.getElementById("yelpChart").getContext('2d');
 
@@ -12,22 +12,24 @@ let yelpChart = new Chart(ctx, {
   data: {
     datasets: [{
       label: 'Businesses',
-      data: [{
-        x: 24,
-        y: 3.2
-      }, {
-        x: 5,
-        y: 4.3
-      }, {
-        x: 10,
-        y: 4.8
-      }, {
-        x: 4,
-        y: 2.3
-      }, {
-        x: 7,
-        y: 4.1
-      }],
+      data: 
+        chartPoints,
+      // [{
+      //   x: 24,
+      //   y: 3.2
+      // }, {
+      //   x: 5,
+      //   y: 4.3
+      // }, {
+      //   x: 10,
+      //   y: 4.8
+      // }, {
+      //   x: 4,
+      //   y: 2.3
+      // }, {
+      //   x: 7,
+      //   y: 4.1
+      // }],
       pointRadius: 5,
       pointStyle: 'rectRounded',
       pointHitRadius: 6,

@@ -8,55 +8,40 @@ const formInput = form => ({
   location: form[1].value
 });
 
+const chartPoints = [];
+
 document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.getElementById("search-form");
   
-  document.addEventListener("submit", e => {
+  document.addEventListener("submit", async function(e) {
     e.preventDefault();
     const searchParams = formInput(searchForm); 
+    let businessData = [];
 
-    // let searchRequest = JSON.stringify(searchParams); 
-
-
-    // axios config.params 
-
-    // axios.get(`/search`, { 
-    //   params: searchParams 
-    // }) // pass searchParams into string interp? 
-    // .then((response) => {
-    //   console.log(response);
-    // })
-    // .catch(function (err) {
-    //   console.log(err);
-    // });
-
-    // axios config.data
-
-    axios({
+    let response = await axios({
       method: 'post',
       url: '/search',
       data: searchParams
     })
-    .then((response) => {
-      console.log(response.get(data));
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
 
-    // send response data to chart.js 
-    // render resulting chart 
+    for (let i = 0; i < response.data.length; i++) {
+      businessData.push(response.data[i]);
+    }
 
-    // let isbn = '0201558025';
-    // axios.get(`/books/${isbn}`)
-    // .then((response) => {
-    //   console.log(response);
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
-    
+    console.log("businessData:", businessData);
+
+    for (let i = 0; i < businessData.length; i++) {
+      let business = businessData[i];
+      let point = {
+        x: business.distance / 1000,
+        y: business.rating
+      };
+      chartPoints.push(point);
+    }
+
+    console.log("chartPoints:", chartPoints);
+ 
   });
 });
       
-
+export default chartPoints;
