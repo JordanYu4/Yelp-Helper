@@ -30,21 +30,19 @@
       <div class="search-bar">
         <form id="search-form" class="search-form" action="/search" method="POST">
           <div class="search-input-fields">
-            <label for="term">
-              <span class="search-label">Find&nbsp;</span>
-              <input id="term" type="text" name="term" placeholder="burgers, barbers, spas, handymen...">
+            <label for="input-term">
+              <span class="search-label">Find</span>
+              <input id="term" type="text" name="term" placeholder="coffee, barbers, tailors...">
             </label>
-            <label for="location">
-              <span class="search-label">&nbsp;&nbsp;Near&nbsp;</span>
+            <label for="input-location">
+              <span class="search-label">Near</span>
               <input id="location" type="text" name="location" placeholder="current address">
             </label>
           </div>
           <input class="submit-button" type="submit" value="">
         </form>
       </div>
-      
-      <br/>
-      
+    
       <div class="data-vis">
         <div class="search-results">
           <ul class="business-list">
@@ -53,7 +51,9 @@
         </div>
         <div class="chart-container">
           <h1>Businesses nearby</h1>
-          <canvas width="700" height="300" id="yelpChart"></canvas>
+          <div class="canvas-container">
+            <canvas id="yelpChart"></canvas>
+          </div>
           <h2>Distance (km)</h2>
         </div>
       </div>

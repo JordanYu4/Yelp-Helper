@@ -28,6 +28,8 @@ const chartBuilder = chartPoints => {
       ]
     },
     options: {
+      responsive: true,
+      responsiveAnimationDuration: 0.5, 
       scales: {
         xAxes: [
           {

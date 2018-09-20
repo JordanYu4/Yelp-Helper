@@ -1,6 +1,6 @@
 .search-bar {
-  // width: 80vw;
-  margin-bottom: 15px;
+  width: 65vw;
+  margin-bottom: 30px;
   
   input {
     font-size: 18px;
@@ -12,22 +12,39 @@
 
 .search-form {
   display: flex;
-  border-radius: 3px;
   
   .search-input-fields {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
     background: #fff;
     padding: 12px 0 12px 12px;
+    box-sizing: border-box;
     border: none;
     border-radius: 3px 0 0 3px;
 
+    .input-term {
+      grid-column: 1 / 2;
+    }
+    
+    .input-location {
+      grid-column: 2 / 3;
+    }
+    
     label {
+      width: 100%;
       font-size: 18px;
       font-weight: 700;
       color: rgba(0, 0, 0, 0.7);
       padding: 0 5px 0;
-
+      box-sizing: border-box;
+      
       &:first-child {
         border-right: 1px solid rgba(220, 220, 220, 1);
+      }
+
+      .search-label {
+        padding: 0 10px 0 5px;
       }
     }
   }
@@ -35,7 +52,6 @@
 
 input.submit-button {
   display: inline-block;
-  /* vertical-align: middle; */
   background: rgba(211, 35, 35, 1);
   background-image: url("../images/search_sprite.png");
   background-size: 24px 24px;
@@ -45,7 +61,7 @@ input.submit-button {
   box-sizing: border-box;
   width: 50px;
   border-radius: 0 3px 3px 0;
-
+  
   &:hover {
     background: rgba(190, 32, 32, 1);
     background-image: url("../images/search_sprite.png");
@@ -56,3 +72,39 @@ input.submit-button {
   }
 }
 
+@media screen and (max-width: 910px) {
+  .search-form {
+    flex-direction: column;
+
+    .search-input-fields {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 50%);
+      padding: 10px 15px 10px 15px;
+      border-radius: 3px 3px 0 0;
+
+      .input-term {
+        grid-row: 1 / 2;
+      }
+
+      .input-location {
+        grid-row: 2 / 3;
+      }
+
+      label {
+        padding: 7px 0 7px 0;
+
+        &:first-child {
+          border-right: none;
+          border-bottom: 1px solid rgba(220, 220, 220, 1);
+        }
+      }
+    }
+  }
+
+  input.submit-button {
+    display: block;
+    width: 65vw;
+    height: 42px;
+    border-radius: 0 0 3px 3px;
+  }
+}

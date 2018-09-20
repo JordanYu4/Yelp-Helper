@@ -11,6 +11,8 @@
 
   .chart-container {
     display: flex;
+    width: 80%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
 
@@ -25,16 +27,21 @@
       padding: 1em;
     }
 
-    canvas {
+    .canvas-container {
+      position: relative;
       width: 100%;
+      height: 100%;
       padding: 15px;
       box-sizing: border-box;
-      // height: 50vw;
     }
   }
-
 }
 
+@media screen and (max-width: 950px) {
+  .data-vis {
+    width: 80vw;
+  }
+}
 
 #yelpChart {
   font-family: $montserrat;
