@@ -9,59 +9,68 @@ const chartBuilder = chartPoints => {
   Chart.defaults.global.defaultFontColor = '#888';
   
   let chart = new Chart(ctx, {
-    type: 'scatter',
+    type: "scatter",
     data: {
-      datasets: [{
-        label: 'Businesses',
-        data: chartPoints,
-        pointRadius: 5,
-        pointStyle: 'rectRounded',
-        pointHitRadius: 6,
-        backgroundColor: 'red',
-        borderWidth: 1,
-        borderColor: 'red',
-        hoverBorderWidth: 2,
-        hoverBorderColor: '#777',
-        businesses: []
-      }]
+      datasets: [
+        {
+          label: "Businesses",
+          data: chartPoints,
+          pointRadius: 5,
+          pointStyle: "rectRounded",
+          pointHitRadius: 6,
+          backgroundColor: "red",
+          borderWidth: 1,
+          borderColor: "red",
+          hoverBorderWidth: 2,
+          hoverBorderColor: "#777",
+          businesses: []
+        }
+      ]
     },
     options: {
       scales: {
-        xAxes: [{
-          type: 'linear',
-          position: 'bottom',
-          ticks: {
-            beginAtZero: true,
-            max: 25
-          }
-        }],
-        yAxes: [{
-          type: 'linear',
-          position: 'left',
-          ticks: {
-            beginAtZero: true,
-            max: 5,
-            stepSize: 1,
-            callback: function(value, index, values) {
-              return value;
+        xAxes: [
+          {
+            type: "linear",
+            position: "bottom",
+            ticks: {
+              beginAtZero: true,
+              max: 25
             }
           }
-        }]
+        ],
+        yAxes: [
+          {
+            type: "linear",
+            position: "left",
+            ticks: {
+              beginAtZero: true,
+              max: 5,
+              stepSize: 1,
+              callback: function(value, index, values) {
+                return value;
+              }
+            }
+          }
+        ]
       },
       legend: {
         display: false,
-        position: 'right',
-        fontColor: '#000'
+        position: "right",
+        fontColor: "#000"
       },
       tooltips: {
+        titleMarginBottom: 5,
+        titleFontColor: "#d1262b",
+        displayColors: false,
+        xPadding: 10,
+        yPadding: 10,
         callbacks: {
           label: function(tooltipItem, data) {
             let idx = tooltipItem.index;
-            let business = data.datasets[tooltipItem.datasetIndex].businesses[idx];
-            return [
-              business.name, 
-              'Rating: ' + business.rating
-            ];
+            let business =
+              data.datasets[tooltipItem.datasetIndex].businesses[idx];
+            return [business.name, "Rating: " + business.rating];
           }
         }
       }
