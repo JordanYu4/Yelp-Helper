@@ -17,7 +17,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // let searchRequest = JSON.stringify(searchParams); 
 
-    axios.get(`/search`, searchParams) // pass searchParams into string interp? 
+
+    // axios config.params 
+
+    // axios.get(`/search`, { 
+    //   params: searchParams 
+    // }) // pass searchParams into string interp? 
+    // .then((response) => {
+    //   console.log(response);
+    // })
+    // .catch(function (err) {
+    //   console.log(err);
+    // });
+
+    // axios config.data
+
+    axios({
+      method: 'post',
+      url: '/search',
+      data: searchParams
+    })
     .then((response) => {
       console.log(response);
     })

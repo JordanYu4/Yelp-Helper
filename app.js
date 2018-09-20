@@ -12,7 +12,7 @@ const client = yelp.client(apiKey);
 
 // Body Parser middleware
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use(function (req, res) {
 //   res.setHeader('Content-Type', 'text/plain')
@@ -22,12 +22,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Search route 
 
-app.get('/search', (request, response) => {
-  console.log("request", request.body);
-  response.json(request.body); 
-  // client.search(request).then(response => {
-  //   return response.jsonBody.businesses;
-  // })
+app.post('/search', (request, response) => {
+  let req = request.body;
+  console.log('searchParams', req);
+  response.json(req); 
+  client.search(req).then(response => {
+    console.log(response);
+  })
   // .then(body => {
   //   let cleanJson = JSON.stringify(body, null, 4);
   //   // let results = JSON.parse(body);
