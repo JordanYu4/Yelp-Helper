@@ -1,5 +1,4 @@
 const axios = require('axios');
-import Chart from 'chart.js';
 import chartBuilder from './chart.js';
 
 import '../assets/stylesheets/index.scss';
