@@ -4,7 +4,7 @@
 
 YelpHelper uses the `Yelp Fusion` API and `Chart.js` to enable users to make faster decisions by visualizing the distance versus rating of businesses of interest. Users can search for a business by keyword or category as they would in [Yelp](https://yelp.com), and YelpHelper will display the top ten search results along with a chart plotting the search result ratings relative to the respective businesses' distance from the user's current location.
 
-![](https://gph.is/2OJ5Iof)
+![new yelp-helper search](https://media.giphy.com/media/1oEV5fXhJroPs8o0TM/giphy.gif)
 
 YelpHelper is programmed in `JavaScript` and uses `Node.js` and `Express.js` for a simple backend, and `BodyParser` middleware to handle API responses.
 
@@ -21,7 +21,7 @@ This README covers the following:
 * Users can search for local businesses
 * Users can select points on the data plot for more business details
 
-![](https://gph.is/2xGo167)
+![initial yelp-helper search](https://media.giphy.com/media/Zcz0CCjeFn9uTu3G9Z/giphy.gif)
 
 ### Seamless application aesthetic
 
