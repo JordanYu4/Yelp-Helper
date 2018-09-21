@@ -32,12 +32,23 @@
     }
     
     label {
+      display: table;
       width: 100%;
       font-size: 18px;
       font-weight: 700;
       color: rgba(0, 0, 0, 0.7);
       padding: 0 5px 0;
       box-sizing: border-box;
+
+      span {
+        display: table-cell;
+        width: 1px;
+      }
+
+      input {
+        display: table-cell; 
+        width: 100%;
+      }
       
       &:first-child {
         border-right: 1px solid rgba(220, 220, 220, 1);
