@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 
-const apiKey = require('./config/key');
+const apiKey = require('./config/keys').apiKey;
 const yelp = require('yelp-fusion');
 const client = yelp.client(apiKey);
 
