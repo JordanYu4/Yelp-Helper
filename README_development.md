@@ -22,7 +22,7 @@ The search sidebar will be identical in function and aesthetic to the Yelp searc
 
 The graphing canvas will include include plotted points representing businesses. Selecting a point on the graph will open up a modal providing additional business details.
 
-![wireframe](https://github.com/JordanYu4/yelp_analytics/blob/master/wireframes/yelp_analytics_lite.png)
+![wireframe](https://github.com/JordanYu4/yelp_analytics/blob/master/readme_graphics/yelp_analytics_lite.png)
 
 ## Architecture and Technologies
 
