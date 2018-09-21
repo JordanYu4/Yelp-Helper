@@ -1,6 +1,5 @@
 const axios = require('axios');
 import chartBuilder from './chart.js';
-
 import '../assets/stylesheets/index.scss';
 
 const formInput = form => ({

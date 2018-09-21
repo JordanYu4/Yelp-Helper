@@ -2,10 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="http://localhost:3000/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script type="text/javascript">
+      var el=document.getElementByTagName("html")[0];
+      el.style.display="none";
+      document.addEventListener("DOMContentLoaded", function(e) { el.style.display="block";})
+    </script>
     <title>YelpHelper</title>
   </head>
-  <body>
+  <body onload="jsLoad()">
     <header class="page-header">
       <a href="https://www.linkedin.com/in/jordan-yu-a7119b80/" 
         target="_blank"
