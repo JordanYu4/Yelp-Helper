@@ -3884,10 +3884,13 @@ input.submit-button:hover {
 
 .data-vis .search-results-revealed {
   width: 30%;
+  height: 500px;
   transition: 0.5s;
-  padding: 30px 15px 30px 0;
+  padding: 0 15px 30px 0;
+  margin: 30px 0 30px;
   box-sizing: border-box;
-  overflow: auto;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .data-vis .results-list {
@@ -3903,9 +3906,19 @@ input.submit-button:hover {
   overflow: hidden;
 }
 
+.data-vis .results-list li section {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+}
+
 .data-vis .results-list li a {
   text-decoration: none;
   color: #000;
+}
+
+.data-vis .results-list li a h1 {
+  font-weight: 700;
 }
 
 .data-vis .results-list li i {
@@ -3924,6 +3937,7 @@ input.submit-button:hover {
   background: rgba(211, 35, 35, 0.8);
 }
 
+.data-vis .results-list li:hover section,
 .data-vis .results-list li:hover a {
   color: #fff;
 }
@@ -3964,6 +3978,16 @@ input.submit-button:hover {
 @media screen and (max-width: 950px) {
   .data-vis {
     width: 90vw;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .data-vis .chart-container-sharing {
+    width: 80%;
+  }
+
+  .data-vis .search-results-revealed {
+    width: 100%;
   }
 }
 

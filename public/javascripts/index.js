@@ -59,10 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
       let listItem = document.createElement("li");
       listItem.setAttribute("id", i);
 
-      let itemTitle = document.createElement("a");
+      let itemBody = document.createElement("a");
+      let itemTitle = document.createElement("h1");
       itemTitle.appendChild(document.createTextNode(`${business.name}`));
-      itemTitle.setAttribute("href", `${business.url}`);
-      itemTitle.setAttribute("target", "_blank");
+      itemBody.setAttribute("href", `${business.url}`);
+      itemBody.setAttribute("target", "_blank");
 
       // let linkPic = document.createElement("a");
       // linkPic.setAttribute("href", `${business.url}`);
@@ -75,7 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // linkPic.appendChild(photo);
 
       listItem.appendChild(photo);
-      listItem.appendChild(itemTitle);
+      itemBody.appendChild(itemTitle);
+      itemBody.appendChild(document.createTextNode(
+        `Rating: ${business.rating}`));
+      itemBody.appendChild(document.createElement("br"));
+      let distance = ((business.distance / 1000) * 0.621371).toFixed(2);
+      itemBody.appendChild(document.createTextNode(
+        `Distance: ${distance} mi`));
+      listItem.appendChild(itemBody);
       resultsList.appendChild(listItem);
     }
 
