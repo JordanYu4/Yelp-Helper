@@ -58,6 +58,18 @@
             <canvas id="yelpChart"></canvas>
           </div>
           <h2>Distance (mi)</h2>
+          <form action="/update-search" class="chart-options-form">
+            <label for="value-options">
+              <h3>Value options:</h3>
+              <input type="checkbox" name="value-factor" value="Rating">&nbsp;Rating</input>
+              <input type="checkbox" name="value-factor" value="Price">&nbsp;Price</input>
+            </label>
+            <label for="business-options">
+              <h3>Business options:</h3>
+              <input type="checkbox" name="business-option" value="Open now">&nbsp;Open now</input>
+              <input type="checkbox" name="business-option" value="Wifi">&nbsp;Wifi</input>
+            </label>
+          </form>
         </div>
       </div>
     </main>

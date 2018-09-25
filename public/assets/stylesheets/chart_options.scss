@@ -1,0 +1,41 @@
+.chart-options-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 1em;
+  padding: 0 15px 0;
+  margin: 0 15px 30px;
+  box-sizing: border-box;
+  line-height: 1.2em;
+  
+  label {
+    padding: 10px 15px 45px;
+    background: rgba(211, 35, 35, 0.9);
+    color: #fff;
+    margin: 15px 0 0;
+    // margin-right: 15px;
+    border-radius: 3px;
+    box-sizing: border-box;
+
+    *:hover {
+      cursor: not-allowed;
+    }
+
+    &.value-options {
+      grid-column: 1 / 2;
+    }
+
+    &.business-options {
+      grid-column: 2 / 3;
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+    margin-bottom: 0.8em;
+  }
+
+  input {
+    padding-right: 30px;
+  }
+}
