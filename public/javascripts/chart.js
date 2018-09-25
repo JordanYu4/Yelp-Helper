@@ -21,7 +21,7 @@ const chartBuilder = chartPoints => {
           backgroundColor: "red",
           borderWidth: 1,
           borderColor: "red",
-          hoverBorderWidth: 2,
+          hoverBorderWidth: 0,
           hoverBorderColor: "#777",
           businesses: []
         }
@@ -73,13 +73,13 @@ const chartBuilder = chartPoints => {
             let idx = tooltipItem.index;
             let business =
               data.datasets[tooltipItem.datasetIndex].businesses[idx];
-            let distance = (business.distance / 1000).toFixed(2);
+            let distance = (business.distance / 1000 * 0.621371).toFixed(2);
             let price = business.price;
             return [
               business.name, 
               "Rating: " + business.rating,
               "Price: " + price,
-              "Distance: " + distance + " km"
+              "Distance: " + distance + " mi"
             ];
           }
         }

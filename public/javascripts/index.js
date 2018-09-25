@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < businessData.length; i++) {
       let business = businessData[i];
-      let point = {
-        x: (business.distance / 1000).toFixed(2),
-        y: business.rating
+      let point = { 
+        x: ((business.distance / 1000) * 0.621371).toFixed(2), 
+        y: business.rating 
       };
       chartPoints.push(point);
     }
