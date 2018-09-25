@@ -29,7 +29,7 @@ const chartBuilder = chartPoints => {
     },
     options: {
       responsive: true,
-      responsiveAnimationDuration: 0.5, 
+      responsiveAnimationDuration: 0.5,
       scales: {
         xAxes: [
           {
@@ -63,20 +63,25 @@ const chartBuilder = chartPoints => {
       },
       tooltips: {
         titleMarginBottom: 5,
-        titleFontColor: "#d1262b",
+        titleFontColor: "#D53A3F",
         bodyFontSize: 16,
         displayColors: false,
         xPadding: 10,
         yPadding: 10,
         callbacks: {
+          title: function([tooltipItem], data) {
+            let idx = tooltipItem.index;
+            let business =
+              data.datasets[tooltipItem.datasetIndex].businesses[idx];
+            return [business.name];
+          },
           label: function(tooltipItem, data) {
             let idx = tooltipItem.index;
             let business =
               data.datasets[tooltipItem.datasetIndex].businesses[idx];
-            let distance = (business.distance / 1000 * 0.621371).toFixed(2);
+            let distance = ((business.distance / 1000) * 0.621371).toFixed(2);
             let price = business.price;
             return [
-              business.name, 
               "Rating: " + business.rating,
               "Price: " + price,
               "Distance: " + distance + " mi"
