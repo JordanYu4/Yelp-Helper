@@ -22,9 +22,10 @@ const config = {
         exclude: /(node_modules)/,
         use: [
           // fallback to style-loader in development
-          process.env.NODE_ENV !== "production"
-            ? "style-loader"
-            : MiniCssExtractPlugin.loader,
+          // process.env.NODE_ENV !== "production"
+          //   ? "style-loader"
+          //   : MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           "css-loader",
           "resolve-url-loader",
           "sass-loader?sourceMap"
@@ -44,8 +45,6 @@ const config = {
   plugins: [
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
       filename: "[name].css",
       chunkFilename: "[id].css"
     })
