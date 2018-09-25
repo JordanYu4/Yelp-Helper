@@ -3867,11 +3867,28 @@ input.submit-button:hover {
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
+  padding: 0 15px 0;
   margin: 0 0 80px 0;
   justify-content: center;
   background: #f8f9f9;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
+}
+
+.data-vis [class^="search-results-"] {
+  width: 0;
+  overflow: hidden;
+}
+
+.data-vis .search-results-revealed {
+  width: 30%;
+  transition: 0.5s;
+  padding: 30px 15px 30px;
+  box-sizing: border-box;
+}
+
+.data-vis .results-list li {
+  margin-bottom: 10px;
 }
 
 .data-vis .chart-container {
@@ -3882,6 +3899,7 @@ input.submit-button:hover {
   align-items: center;
   box-sizing: border-box;
   color: #5a5a5a;
+  transition: 0.5s;
 }
 
 .data-vis .chart-container h1 {

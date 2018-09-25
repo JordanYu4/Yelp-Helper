@@ -21,10 +21,15 @@ const maxDistance = points => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.getElementById("search-form");
+  const searchResults = document.getElementsByClassName("search-results-hidden")[0];
+  const resultsList = document.getElementById("results-list");
   const yelpChart = chartBuilder(chartPoints);
   
   document.addEventListener("submit", async function(e) {
     e.preventDefault();
+    searchResults.classList.remove("search-results-hidden");
+    searchResults.classList.add("search-results-revealed");
+    resultsList.innerHTML = '';
     const searchParams = formInput(searchForm); 
     let businessData = [];
     chartPoints = [];
@@ -41,12 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < businessData.length; i++) {
       let business = businessData[i];
+
       let point = { 
         x: ((business.distance / 1000) * 0.621371).toFixed(2), 
         y: business.rating 
       };
       chartPoints.push(point);
+
+      let listItem = document.createElement("li");
+      listItem.setAttribute("id", i);
+      listItem.appendChild(document.createTextNode(`${business.name}`));
+      resultsList.appendChild(listItem);
     }
+
+    searchResults.setAttribute("style", "display: block");
 
     yelpChart.data.datasets[0].data = chartPoints;
     yelpChart.data.datasets[0].businesses = businessData;
