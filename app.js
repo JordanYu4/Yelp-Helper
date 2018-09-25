@@ -21,8 +21,9 @@ app.post('/search', (request, response) => {
             image_url, 
             url, 
             rating, 
+            price,
             distance} = businesses[i]; 
-      let business = {name, image_url, url, rating, distance};
+      let business = {name, image_url, url, rating, price, distance};
       dataSet.push(business);
     }
     response.send(dataSet);

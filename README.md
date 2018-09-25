@@ -8,7 +8,7 @@ YelpHelper uses the `Yelp Fusion` API and `Chart.js` to enable users to make fas
 
 YelpHelper is programmed in `JavaScript` and uses `Node.js` and `Express.js` for a simple backend, and `BodyParser` middleware to handle API responses.
 
-This project was designed, built, and deployed within a one-week deadline. Additional enhancements will be added.
+This project was designed, built, and deployed within a one-week timeframe. Additional enhancements will be added.
 
 This README covers the following:
 * [Features](https://github.com/JordanYu4/Yelp-Helper#features)

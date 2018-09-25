@@ -64,6 +64,7 @@ const chartBuilder = chartPoints => {
       tooltips: {
         titleMarginBottom: 5,
         titleFontColor: "#d1262b",
+        bodyFontSize: 16,
         displayColors: false,
         xPadding: 10,
         yPadding: 10,
@@ -72,7 +73,14 @@ const chartBuilder = chartPoints => {
             let idx = tooltipItem.index;
             let business =
               data.datasets[tooltipItem.datasetIndex].businesses[idx];
-            return [business.name, "Rating: " + business.rating];
+            let distance = (business.distance / 1000).toFixed(2);
+            let price = business.price;
+            return [
+              business.name, 
+              "Rating: " + business.rating,
+              "Price: " + price,
+              "Distance: " + distance + " km"
+            ];
           }
         }
       }

@@ -39,8 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
       businessData.push(response.data[i]);
     }
 
-    console.log("businessData:", businessData);
-
     for (let i = 0; i < businessData.length; i++) {
       let business = businessData[i];
       let point = {
@@ -54,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     yelpChart.data.datasets[0].businesses = businessData;
     yelpChart.options.scales.xAxes[0].ticks.max = maxDistance(chartPoints);
     yelpChart.update();
-    console.log(yelpChart);
   });
 });
       
