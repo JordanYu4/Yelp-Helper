@@ -3874,6 +3874,7 @@ input.submit-button:hover {
   background: #f8f9f9;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
 .data-vis [class^="search-results-"] {
@@ -3882,10 +3883,9 @@ input.submit-button:hover {
 }
 
 .data-vis .search-results-revealed {
-  width: 30%;
-  max-height: 100%;
+  width: 40%;
   transition: 0.5s;
-  padding: 30px 15px 30px;
+  padding: 30px 15px 30px 0;
   box-sizing: border-box;
   overflow: auto;
 }
@@ -3895,10 +3895,35 @@ input.submit-button:hover {
 }
 
 .data-vis .results-list li {
+  display: flex;
   background: #f0f0f0;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 2px;
+}
+
+.data-vis .results-list li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.data-vis .results-list li:hover {
+  background: rgba(211, 35, 35, 0.8);
+}
+
+.data-vis .results-list li:hover a {
+  color: #fff;
+}
+
+.data-vis .results-list li i {
+  min-width: 60px;
+  min-height: 60px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  margin-right: 10px;
 }
 
 .data-vis .chart-container {

@@ -55,7 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let listItem = document.createElement("li");
       listItem.setAttribute("id", i);
-      listItem.appendChild(document.createTextNode(`${business.name}`));
+      let listLink = document.createElement("a");
+      listLink.setAttribute("href", `${business.url}`);
+      listLink.setAttribute("target", "_blank");
+      let listPic = document.createElement("i");
+      listPic.setAttribute(
+        "style", `background-image: url(${business.image_url})`
+      );
+      listItem.appendChild(listPic);
+      listLink.appendChild(document.createTextNode(`${business.name}`));
+      listItem.appendChild(listLink);
       resultsList.appendChild(listItem);
     }
 
