@@ -46,7 +46,7 @@ const chartBuilder = chartPoints => {
             type: "linear",
             position: "left",
             ticks: {
-              beginAtZero: true,
+              beginAtZero: false,
               max: 5,
               stepSize: 1,
               callback: function(value, index, values) {
