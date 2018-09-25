@@ -1,7 +1,7 @@
 @import './partials/variables';
 
 .data-vis {
-  width: 70vw;
+  width: 80vw;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
@@ -19,15 +19,21 @@
   
   .search-results-revealed {
     width: 30%;
+    max-height: 100%;
     transition: 0.5s;
     padding: 30px 15px 30px;
     box-sizing: border-box;
+    overflow: auto;
   }
 
   .results-list {
+    max-height: 100%;
 
     li {
+      background: rgb(240, 240, 240);
+      padding: 10px;
       margin-bottom: 10px;
+      border-radius: 2px;
     }
   }
 
@@ -63,7 +69,7 @@
 
 @media screen and (max-width: 950px) {
   .data-vis {
-    width: 80vw;
+    width: 90vw;
   }
 }
 

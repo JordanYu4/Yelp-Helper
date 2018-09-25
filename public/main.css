@@ -3669,6 +3669,7 @@ header {
   box-sizing: border-box;
   background: rgba(211, 35, 35, 0.9);
   color: #fff;
+  z-index: 2;
 }
 
 header a {
@@ -3863,7 +3864,7 @@ input.submit-button:hover {
 }
 
 .data-vis {
-  width: 70vw;
+  width: 80vw;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
@@ -3882,13 +3883,22 @@ input.submit-button:hover {
 
 .data-vis .search-results-revealed {
   width: 30%;
+  max-height: 100%;
   transition: 0.5s;
   padding: 30px 15px 30px;
   box-sizing: border-box;
+  overflow: auto;
+}
+
+.data-vis .results-list {
+  max-height: 100%;
 }
 
 .data-vis .results-list li {
+  background: #f0f0f0;
+  padding: 10px;
   margin-bottom: 10px;
+  border-radius: 2px;
 }
 
 .data-vis .chart-container {
@@ -3922,7 +3932,7 @@ input.submit-button:hover {
 
 @media screen and (max-width: 950px) {
   .data-vis {
-    width: 80vw;
+    width: 90vw;
   }
 }
 
