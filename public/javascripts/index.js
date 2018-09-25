@@ -21,14 +21,17 @@ const maxDistance = points => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.getElementById("search-form");
+  const chartContainer = document.getElementById("chart-container");
   const searchResults = document.getElementsByClassName("search-results-hidden")[0];
   const resultsList = document.getElementById("results-list");
   const yelpChart = chartBuilder(chartPoints);
   
   document.addEventListener("submit", async function(e) {
     e.preventDefault();
+    chartContainer.className = "chart-container-sharing";
     searchResults.classList.remove("search-results-hidden");
     searchResults.classList.add("search-results-revealed");
+
     resultsList.innerHTML = '';
     const searchParams = formInput(searchForm); 
     let businessData = [];
@@ -55,16 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let listItem = document.createElement("li");
       listItem.setAttribute("id", i);
-      let listLink = document.createElement("a");
-      listLink.setAttribute("href", `${business.url}`);
-      listLink.setAttribute("target", "_blank");
-      let listPic = document.createElement("i");
-      listPic.setAttribute(
+
+      let itemTitle = document.createElement("a");
+      itemTitle.appendChild(document.createTextNode(`${business.name}`));
+      itemTitle.setAttribute("href", `${business.url}`);
+      itemTitle.setAttribute("target", "_blank");
+
+      // let linkPic = document.createElement("a");
+      // linkPic.setAttribute("href", `${business.url}`);
+      // linkPic.setAttribute("target", "_blank");
+
+      let photo = document.createElement("i");
+      photo.setAttribute(
         "style", `background-image: url(${business.image_url})`
       );
-      listItem.appendChild(listPic);
-      listLink.appendChild(document.createTextNode(`${business.name}`));
-      listItem.appendChild(listLink);
+      // linkPic.appendChild(photo);
+
+      listItem.appendChild(photo);
+      listItem.appendChild(itemTitle);
       resultsList.appendChild(listItem);
     }
 
