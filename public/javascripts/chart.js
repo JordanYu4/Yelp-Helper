@@ -93,7 +93,7 @@ const chartBuilder = chartPoints => {
             let price = business.price;
             return [
               "Rating: " + business.rating,
-              "Price: " + (price ? price : 'unlisted'),
+              "Price: " + (price ? price : 'unlisted'), 
               "Distance: " + business.distance + " mi"
             ];
           }
