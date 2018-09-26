@@ -136,10 +136,8 @@ button:focus {
 }
 
 html {
-  background: url(loaded_images/d0436d3e8d5426f23d6696b38ed62603.png);
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: 0 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -150,6 +148,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   overflow-y: scroll;
+  background: url(loaded_images/d0436d3e8d5426f23d6696b38ed62603.png) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
 }
 
 /*!
@@ -3880,7 +3881,7 @@ input.submit-button:hover {
 
 @media screen and (max-width: 950px) {
   .data-vis {
-    width: 90vw;
+    width: 85vw;
     flex-direction: column-reverse;
     align-items: center;
   }

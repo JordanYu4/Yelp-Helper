@@ -1,10 +1,12 @@
 @import 'partials/variables';
 
 html {
-  background: url(../images/shakshuka_brunch.png);
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: 0 0;
+  // background: url(../images/shakshuka_brunch.png) no-repeat center center fixed;
+  // background-size: cover;
+  // background-repeat: repeat;
+  // background-position: 0 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -15,4 +17,9 @@ body {
   font-family: $montserrat;
   font-size: 14px;
   overflow-y: scroll;
+  background: url(../images/shakshuka_brunch.png) no-repeat center center fixed;
+  background-size: cover;
+  // background-repeat: repeat;
+  // background-position: 0 0;
+  height: 100%;
 }
