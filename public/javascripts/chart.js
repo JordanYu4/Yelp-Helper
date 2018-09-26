@@ -63,7 +63,7 @@ const chartBuilder = chartPoints => {
               display: true,
               labelString: 'Value', 
               fontSize: 16,
-              fontColor: 'rgb(80, 80, 80)',
+              fontColor: 'rgb(90, 90, 90)',
               fontStyle: 'bold'
             }
           }
@@ -90,12 +90,11 @@ const chartBuilder = chartPoints => {
             let idx = tooltipItem.index;
             let business =
               data.datasets[tooltipItem.datasetIndex].businesses[idx];
-            let distance = business.distance;
             let price = business.price;
             return [
               "Rating: " + business.rating,
-              "Price: " + price,
-              "Distance: " + distance + " mi"
+              "Price: " + (price ? price : 'unlisted'),
+              "Distance: " + business.distance + " mi"
             ];
           }
         }

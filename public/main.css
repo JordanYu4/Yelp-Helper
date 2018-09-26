@@ -3927,10 +3927,6 @@ input.submit-button:hover {
   width: 70%;
 }
 
-#yelpChart {
-  font-family: "Montserrat", sans-serif;
-}
-
 .data-vis [class^="search-results-"] {
   width: 0;
   overflow: hidden;
@@ -3954,10 +3950,17 @@ input.submit-button:hover {
 .data-vis .results-list li {
   display: flex;
   background: #f0f0f0;
-  padding: 10px;
   margin-bottom: 10px;
   border-radius: 2px;
   overflow: hidden;
+}
+
+.data-vis .results-list li a {
+  padding: 10px;
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  width: 100%;
 }
 
 .data-vis .results-list li section {
@@ -3966,12 +3969,7 @@ input.submit-button:hover {
   line-height: 1.5em;
 }
 
-.data-vis .results-list li a {
-  text-decoration: none;
-  color: #000;
-}
-
-.data-vis .results-list li a h1 {
+.data-vis .results-list li h1 {
   font-weight: 700;
 }
 
