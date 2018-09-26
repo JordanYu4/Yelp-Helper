@@ -30,6 +30,11 @@ const chartBuilder = chartPoints => {
     options: {
       responsive: true,
       responsiveAnimationDuration: 0.5,
+      layout: {
+        padding: {
+          left: 10
+        }
+      },
       onClick: navToBusiness,
       scales: {
         xAxes: [
@@ -53,21 +58,19 @@ const chartBuilder = chartPoints => {
               callback: function(value, index, values) {
                 return value;
               }
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Value', 
+              fontSize: 16,
+              fontColor: 'rgb(80, 80, 80)',
+              fontStyle: 'bold'
             }
           }
         ]
       },
       legend: {
-        display: false,
-        position: "right",
-        fontColor: "#000"
-      },
-      hover: {
-        onHover: function(e) {
-          let point = this.getElementAtEvent(e)[0];
-          if (point) e.target.style.cursor = 'pointer';
-          else e.target.style.cursor = 'default';
-        }
+        display: false
       },
       tooltips: {
         titleMarginBottom: 5,
@@ -95,6 +98,13 @@ const chartBuilder = chartPoints => {
               "Distance: " + distance + " mi"
             ];
           }
+        }
+      }, 
+      hover: {
+        onHover: function (e) {
+          let point = this.getElementAtEvent(e)[0];
+          if (point) e.target.style.cursor = 'pointer';
+          else e.target.style.cursor = 'default';
         }
       }
     }

@@ -4034,7 +4034,11 @@ input.submit-button:hover {
 }
 
 .chart-options-form input {
-  padding-right: 30px;
+  margin-right: 5px;
+}
+
+.chart-options-form input * {
+  margin-right: 10px;
 }
 
 

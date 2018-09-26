@@ -8,8 +8,6 @@ const formInput = form => ({
   location: form[1].value
 });
 
-let chartPoints = [];
-
 const maxDistance = points => {
   if (points.length === 0) return 25;
   let max = 0;
@@ -19,6 +17,8 @@ const maxDistance = points => {
   }
   return Math.ceil(max);
 };
+
+let chartPoints = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.getElementById("search-form");
