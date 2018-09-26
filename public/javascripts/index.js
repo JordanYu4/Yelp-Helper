@@ -1,5 +1,6 @@
 const axios = require('axios');
 import chartBuilder from './chart.js';
+import listItemBuilder from './listItem.js';
 import '../assets/stylesheets/index.scss';
 
 const formInput = form => ({
@@ -56,34 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       chartPoints.push(point);
 
-      let listItem = document.createElement("li");
-      listItem.setAttribute("id", i);
-
-      let itemBody = document.createElement("a");
-      let itemTitle = document.createElement("h1");
-      itemTitle.appendChild(document.createTextNode(`${business.name}`));
-      itemBody.setAttribute("href", `${business.url}`);
-      itemBody.setAttribute("target", "_blank");
-
-      // let linkPic = document.createElement("a");
-      // linkPic.setAttribute("href", `${business.url}`);
-      // linkPic.setAttribute("target", "_blank");
-
-      let photo = document.createElement("i");
-      photo.setAttribute(
-        "style", `background-image: url(${business.image_url})`
-      );
-      // linkPic.appendChild(photo);
-
-      listItem.appendChild(photo);
-      itemBody.appendChild(itemTitle);
-      itemBody.appendChild(document.createTextNode(
-        `Rating: ${business.rating}`));
-      itemBody.appendChild(document.createElement("br"));
-      let distance = ((business.distance / 1000) * 0.621371).toFixed(2);
-      itemBody.appendChild(document.createTextNode(
-        `Distance: ${distance} mi`));
-      listItem.appendChild(itemBody);
+      let listItem = listItemBuilder(business, i);
+      
       resultsList.appendChild(listItem);
     }
 
