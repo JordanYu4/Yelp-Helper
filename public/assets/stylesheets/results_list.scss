@@ -1,0 +1,66 @@
+.data-vis {
+  [class^="search-results-"] {
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .search-results-revealed {
+    width: 30%;
+    height: 500px;
+    transition: 0.5s;
+    padding: 0 15px 30px 0;
+    margin: 30px 0 30px;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  .results-list {
+    max-height: 100%;
+
+    li {
+      display: flex;
+      background: rgb(240, 240, 240);
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 2px;
+      overflow: hidden;
+
+      section {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5em;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+
+        h1 {
+          font-weight: 700;
+        }
+      }
+      
+      i {
+        min-width: 60px;
+        min-height: 60px;
+        max-height: 60px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 2px;
+        margin-right: 10px;
+      }
+
+      &:hover {
+        background: rgba(211, 35, 35, 0.8);
+        
+        section, a {
+          color: #fff;
+        }
+      }
+
+    }
+  }
+}

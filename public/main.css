@@ -3878,6 +3878,59 @@ input.submit-button:hover {
   overflow: hidden;
 }
 
+@media screen and (max-width: 950px) {
+  .data-vis {
+    width: 90vw;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .data-vis .chart-container-sharing {
+    width: 80%;
+  }
+
+  .data-vis .search-results-revealed {
+    width: 100%;
+  }
+}
+
+.data-vis [class^="chart-container"] {
+  width: 80%;
+  max-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  color: #5a5a5a;
+  transition: 0.5s;
+}
+
+.data-vis [class^="chart-container"] h1 {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 1em;
+}
+
+.data-vis [class^="chart-container"] h2 {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 1em 1em 0;
+}
+
+.data-vis [class^="chart-container"] .canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.data-vis .chart-container-sharing {
+  width: 70%;
+}
+
+#yelpChart {
+  font-family: "Montserrat", sans-serif;
+}
+
 .data-vis [class^="search-results-"] {
   width: 0;
   overflow: hidden;
@@ -3941,59 +3994,6 @@ input.submit-button:hover {
 .data-vis .results-list li:hover section,
 .data-vis .results-list li:hover a {
   color: #fff;
-}
-
-.data-vis [class^="chart-container"] {
-  width: 80%;
-  max-height: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  color: #5a5a5a;
-  transition: 0.5s;
-}
-
-.data-vis [class^="chart-container"] h1 {
-  font-size: 20px;
-  font-weight: 400;
-  padding: 1em;
-}
-
-.data-vis [class^="chart-container"] h2 {
-  font-size: 16px;
-  font-weight: 700;
-  padding: 1em 1em 0;
-}
-
-.data-vis [class^="chart-container"] .canvas-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.data-vis .chart-container-sharing {
-  width: 70%;
-}
-
-@media screen and (max-width: 950px) {
-  .data-vis {
-    width: 90vw;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .data-vis .chart-container-sharing {
-    width: 80%;
-  }
-
-  .data-vis .search-results-revealed {
-    width: 100%;
-  }
-}
-
-#yelpChart {
-  font-family: "Montserrat", sans-serif;
 }
 
 .chart-options-form {
