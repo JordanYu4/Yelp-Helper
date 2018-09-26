@@ -88,6 +88,12 @@ video {
   vertical-align: baseline;
 }
 
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -135,11 +141,6 @@ button:focus {
   outline: none;
 }
 
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
   display: flex;
   flex-shrink: 0;
@@ -147,7 +148,8 @@ body {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  overflow-y: scroll;
+  overflow: scroll;
+  overflow-x: hidden;
   background: url(loaded_images/d0436d3e8d5426f23d6696b38ed62603.png) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
@@ -3730,7 +3732,7 @@ header .nav-links {
 
 .header-spacer {
   width: 100%;
-  height: 90px;
+  height: 80px;
 }
 
 main {
@@ -3738,8 +3740,8 @@ main {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 100%;
-  margin: 25px 15px 0 15px;
+  width: 100vw;
+  margin-top: 35px;
   box-sizing: border-box;
 }
 

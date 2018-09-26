@@ -1,14 +1,5 @@
 @import 'partials/variables';
 
-html {
-  // background: url(../images/shakshuka_brunch.png) no-repeat center center fixed;
-  // background-size: cover;
-  // background-repeat: repeat;
-  // background-position: 0 0;
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
   display: flex;
   flex-shrink: 0;
@@ -16,10 +7,9 @@ body {
   align-items: center;
   font-family: $montserrat;
   font-size: 14px;
-  overflow-y: scroll;
+  overflow: scroll;
+  overflow-x: hidden;
   background: url(../images/shakshuka_brunch.png) no-repeat center center fixed;
   background-size: cover;
-  // background-repeat: repeat;
-  // background-position: 0 0;
   height: 100%;
 }
