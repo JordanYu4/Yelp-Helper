@@ -26,9 +26,8 @@ const listItemBuilder = (business, itemId) => {
   itemBody.appendChild(document.createTextNode(
     `Price: ${business.price}`));
   itemBody.appendChild(document.createElement("br"));
-  let distance = ((business.distance / 1000) * 0.621371).toFixed(2);
   itemBody.appendChild(document.createTextNode(
-    `Distance: ${distance} mi`));
+    `Distance: ${business.distance} mi`));
   listItem.appendChild(itemBody);
   return listItem;
 }

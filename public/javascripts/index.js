@@ -52,13 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
       let business = businessData[i];
 
       let point = { 
-        x: ((business.distance / 1000) * 0.621371).toFixed(2), 
+        x: business.distance, 
         y: business.rating 
       };
       chartPoints.push(point);
 
       let listItem = listItemBuilder(business, i);
-      
       resultsList.appendChild(listItem);
     }
 

@@ -79,7 +79,7 @@ const chartBuilder = chartPoints => {
             let idx = tooltipItem.index;
             let business =
               data.datasets[tooltipItem.datasetIndex].businesses[idx];
-            let distance = ((business.distance / 1000) * 0.621371).toFixed(2);
+            let distance = business.distance;
             let price = business.price;
             return [
               "Rating: " + business.rating,
