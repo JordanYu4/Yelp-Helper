@@ -3887,14 +3887,6 @@ input.submit-button:hover {
     flex-direction: column-reverse;
     align-items: center;
   }
-
-  .data-vis .chart-container-sharing {
-    width: 80%;
-  }
-
-  .data-vis .search-results-revealed {
-    width: 100%;
-  }
 }
 
 .data-vis [class^="chart-container"] {
@@ -3926,8 +3918,20 @@ input.submit-button:hover {
   height: 100%;
 }
 
+@media screen and (max-width: 950px) {
+  .data-vis [class^="chart-container"] {
+    width: 90%;
+  }
+}
+
 .data-vis .chart-container-sharing {
   width: 70%;
+}
+
+@media screen and (max-width: 950px) {
+  .data-vis .chart-container-sharing {
+    width: 90%;
+  }
 }
 
 .data-vis [class^="search-results-"] {
@@ -3946,13 +3950,21 @@ input.submit-button:hover {
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 950px) {
+  .data-vis .search-results-revealed {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+}
+
 .data-vis .results-list {
   max-height: 100%;
 }
 
 .data-vis .results-list li {
   display: flex;
-  background: #f0f0f0;
+  background: #aaaaaa;
   margin-bottom: 10px;
   border-radius: 2px;
   overflow: hidden;

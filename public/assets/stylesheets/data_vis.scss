@@ -12,20 +12,11 @@
   border-radius: 5px;
   font-family: $montserrat;
   overflow: hidden;
-}
 
-@media screen and (max-width: 950px) {
-  .data-vis {
+  @media screen and (max-width: 950px) {
     width: 85vw;
     flex-direction: column-reverse;
     align-items: center;
-
-    .chart-container-sharing {
-      width: 80%;
-    }
-
-    .search-results-revealed {
-      width: 100%;
-    }
   }
 }
+

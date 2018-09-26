@@ -13,6 +13,12 @@
     box-sizing: border-box;
     overflow: scroll;
     overflow-x: hidden;
+
+    @media screen and (max-width: 950px) {
+      width: 100%;
+      padding: 0;
+      margin: 0 0 20px;
+    }
   }
 
   .results-list {
@@ -20,7 +26,7 @@
 
     li {
       display: flex;
-      background: rgb(240, 240, 240);
+      background: rgb(170, 170, 170);
       margin-bottom: 10px;
       border-radius: 2px;
       overflow: hidden;
