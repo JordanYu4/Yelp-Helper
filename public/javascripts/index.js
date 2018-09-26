@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let point = { 
         x: business.distance, 
-        y: business.rating 
+        y: business.rating, 
+        url: business.url
       };
       chartPoints.push(point);
 
