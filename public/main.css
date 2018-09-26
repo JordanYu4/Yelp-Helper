@@ -138,7 +138,8 @@ button:focus {
 html {
   background: url(loaded_images/d0436d3e8d5426f23d6696b38ed62603.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  background-position: 0 0;
 }
 
 body {
