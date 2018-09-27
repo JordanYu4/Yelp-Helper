@@ -1,33 +1,22 @@
 const axios = require('axios');
 import chartBuilder from './chart.js';
 import listItemBuilder from './listItem.js';
+import { minValue, maxDistance, formInput } from './util.js';
 import '../assets/stylesheets/index.scss';
-
-const formInput = form => ({
-  term: form[0].value,
-  location: form[1].value
-});
-
-const maxDistance = points => {
-  if (points.length === 0) return 25;
-  let max = 0;
-  for (let i = 0; i < points.length; i++) {
-    let distance = points[i].x;
-    if (distance > max) max = distance;
-  }
-  return Math.ceil(max);
-};
 
 let chartPoints = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.getElementById("search-form");
+  const searchOptionsForm= document.getElementById("search-options-form");
   const chartContainer = document.getElementById("chart-container");
   const searchResults = document.getElementsByClassName("search-results-hidden")[0];
   const resultsList = document.getElementById("results-list");
   const yelpChart = chartBuilder(chartPoints);
+
+  const optionState = formInput(searchOptionsForm);
   
-  document.addEventListener("submit", async function(e) {
+  searchForm.addEventListener("submit", async function(e) {
     e.preventDefault();
     chartContainer.className = "chart-container-sharing";
     searchResults.classList.remove("search-results-hidden");
@@ -62,12 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
       resultsList.appendChild(listItem);
     }
 
-    searchResults.setAttribute("style", "display: block");
-
     yelpChart.data.datasets[0].data = chartPoints;
     yelpChart.data.datasets[0].businesses = businessData;
+    yelpChart.options.scales.yAxes[0].ticks.min = minValue(chartPoints);
     yelpChart.options.scales.xAxes[0].ticks.max = maxDistance(chartPoints);
     yelpChart.update();
+  });
+
+  searchOptionsForm.addEventListener("change", function() {
+    
   });
 });
       

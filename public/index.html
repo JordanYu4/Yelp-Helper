@@ -49,9 +49,7 @@
       <div class="data-vis-container">
         <div class="data-vis">
           <div class="search-results-hidden animated fadeIn">
-            <ul id="results-list" class="results-list">
-  
-            </ul>
+            <ul id="results-list" class="results-list"></ul>
           </div>
           <div class="chart-container-solo" id="chart-container">
             <h1>Businesses nearby</h1>
@@ -59,13 +57,13 @@
               <canvas id="yelpChart"></canvas>
             </div>
             <h2>Distance (mi)</h2>
-            <form action="/update-search" class="chart-options-form">
+            <form action="/update-search" id="search-options-form" class="chart-options-form">
               <label for="value-factors">
                 <h3>Value options:</h3>
                 <input 
                   type="checkbox" 
                   name="value-factor" 
-                  value="Rating"
+                  value="rating"
                   checked="checked"
                 >
                   <span>Rating</span>
@@ -73,7 +71,7 @@
                 <input 
                   type="checkbox" 
                   name="value-factor" 
-                  value="Price"
+                  value="price"
                 >
                   <span>Price</span>
                 </input>
@@ -83,7 +81,7 @@
                 <input 
                   type="checkbox" 
                   name="business-option" 
-                  value="Open now"
+                  value="openNow"
                   checked="checked"
                 >
                   <span>Open now</span>
@@ -91,7 +89,7 @@
                 <input 
                   type="checkbox" 
                   name="business-option" 
-                  value="Wifi"
+                  value="wifi"
                 >
                   <span>Wifi</span>
                 </input>
