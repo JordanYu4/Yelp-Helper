@@ -5,8 +5,8 @@
   }
   
   .search-results-revealed {
-    // display: block;
     width: 25%;
+    height: inherit;
     transition: 0.5s;
     padding-bottom: 30px;
     margin-top: 30px;
@@ -22,7 +22,8 @@
   
   .results-list {
     display: block;
-    overflow: scroll;
+    height: inherit;
+    overflow: auto;
     overflow-x: hidden;
     padding-right: 8px;
 
