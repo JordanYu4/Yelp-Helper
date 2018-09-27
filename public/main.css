@@ -3878,7 +3878,7 @@ input.submit-button:hover {
   background: #f8f9f9;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 @media screen and (max-width: 950px) {
@@ -3925,7 +3925,7 @@ input.submit-button:hover {
 }
 
 .data-vis .chart-container-sharing {
-  width: 70%;
+  width: 75%;
 }
 
 @media screen and (max-width: 950px) {
@@ -3936,18 +3936,14 @@ input.submit-button:hover {
 
 .data-vis [class^="search-results-"] {
   width: 0;
-  overflow: hidden;
 }
 
 .data-vis .search-results-revealed {
-  width: 30%;
-  height: 500px;
+  width: 25%;
   transition: 0.5s;
-  padding: 0 15px 30px 0;
-  margin: 30px 0 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
   box-sizing: border-box;
-  overflow: scroll;
-  overflow-x: hidden;
 }
 
 @media screen and (max-width: 950px) {
@@ -3959,15 +3955,22 @@ input.submit-button:hover {
 }
 
 .data-vis .results-list {
-  max-height: 100%;
+  display: block;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-right: 8px;
 }
 
 .data-vis .results-list li {
   display: flex;
-  background: #aaaaaa;
+  background: #c8c8c8;
   margin-bottom: 10px;
   border-radius: 2px;
   overflow: hidden;
+}
+
+.data-vis .results-list li:last-child {
+  margin-bottom: 0;
 }
 
 .data-vis .results-list li a {

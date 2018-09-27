@@ -11,7 +11,7 @@
   background: rgba(248, 249, 249, 1);
   border-radius: 5px;
   font-family: $montserrat;
-  overflow: hidden;
+  overflow-y: hidden;
 
   @media screen and (max-width: 950px) {
     width: 85vw;
