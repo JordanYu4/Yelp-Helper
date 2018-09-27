@@ -3873,12 +3873,11 @@ input.submit-button:hover {
   flex-direction: row;
   flex-shrink: 0;
   padding: 0 15px 0;
-  margin: 0 0 80px 0;
+  margin-bottom: 30px;
   justify-content: center;
   background: #f8f9f9;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
-  overflow-y: hidden;
 }
 
 @media screen and (max-width: 950px) {
@@ -3891,7 +3890,6 @@ input.submit-button:hover {
 
 .data-vis [class^="chart-container"] {
   width: 80%;
-  max-height: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3939,26 +3937,25 @@ input.submit-button:hover {
 
 .data-vis .search-results-revealed {
   width: 25%;
-  height: inherit;
+  max-height: inherit;
   transition: 0.5s;
-  padding-bottom: 30px;
   margin-top: 30px;
+  margin-bottom: 30px;
   box-sizing: border-box;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 950px) {
   .data-vis .search-results-revealed {
     width: 100%;
     padding: 0;
-    margin: 0 0 20px;
+    margin: 0 0 30px;
   }
 }
 
 .data-vis .results-list {
-  display: block;
-  height: inherit;
-  overflow: auto;
-  overflow-x: hidden;
+  max-height: inherit;
   padding-right: 8px;
 }
 
@@ -3966,7 +3963,7 @@ input.submit-button:hover {
   display: flex;
   background: #c8c8c8;
   margin-bottom: 10px;
-  border-radius: 2px;
+  border-radius: 3px;
   overflow: hidden;
 }
 

@@ -3,7 +3,6 @@
 .data-vis {
   [class^="chart-container"] {
     width: 80%;
-    max-height: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
