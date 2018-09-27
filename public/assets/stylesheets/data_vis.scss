@@ -1,7 +1,7 @@
 @import './partials/variables';
 
 .data-vis-container {
-  
+
 }
 
 .data-vis {
@@ -16,7 +16,7 @@
   border-radius: 5px;
   font-family: $montserrat;
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1160px) {
     width: 85vw;
     flex-direction: column-reverse;
     align-items: center;

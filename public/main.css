@@ -3879,7 +3879,7 @@ input.submit-button:hover {
   font-family: "Montserrat", sans-serif;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1160px) {
   .data-vis {
     width: 85vw;
     flex-direction: column-reverse;
@@ -3914,7 +3914,7 @@ input.submit-button:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1160px) {
   .data-vis [class^="chart-container"] {
     width: 90%;
   }
@@ -3924,7 +3924,7 @@ input.submit-button:hover {
   width: 75%;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1160px) {
   .data-vis .chart-container-sharing {
     width: 90%;
   }
@@ -3944,12 +3944,16 @@ input.submit-button:hover {
   overflow-x: hidden;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1160px) {
   .data-vis .search-results-revealed {
     width: 100%;
     padding: 0;
-    margin: 0 0 30px;
+    margin: 0 0 15px;
     overflow: visible;
+  }
+
+  .data-vis .search-results-revealed .results-list {
+    padding-left: 8px;
   }
 }
 
