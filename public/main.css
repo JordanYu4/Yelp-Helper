@@ -4033,10 +4033,6 @@ input.submit-button:hover {
   box-sizing: border-box;
 }
 
-.chart-options-form label *:hover {
-  cursor: not-allowed;
-}
-
 .chart-options-form label.value-options {
   grid-column: 1 / 2;
 }
@@ -4050,12 +4046,12 @@ input.submit-button:hover {
   margin-bottom: 0.8em;
 }
 
-.chart-options-form input {
-  margin-right: 5px;
+.chart-options-form input:hover {
+  cursor: pointer;
 }
 
-.chart-options-form input * {
-  margin-right: 10px;
+.chart-options-form span {
+  margin-right: 15px;
 }
 
 

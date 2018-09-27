@@ -13,13 +13,8 @@
     background: rgba(211, 35, 35, 0.9);
     color: #fff;
     margin: 15px 0 0;
-    // margin-right: 15px;
     border-radius: 3px;
     box-sizing: border-box;
-
-    *:hover {
-      cursor: not-allowed;
-    }
 
     &.value-options {
       grid-column: 1 / 2;
@@ -36,10 +31,14 @@
   }
 
   input {
-    margin-right: 5px;
-
-    * {
-      margin-right: 10px;
-    }
+    // margin-right: 5px;
+    
+    &:hover {
+      cursor: pointer;
+    }  
+  }
+  
+  span {
+    margin-right: 15px;
   }
 }
