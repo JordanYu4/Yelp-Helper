@@ -8,7 +8,9 @@ let chartPoints = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.getElementById("search-form");
-  const searchOptionsForm= document.getElementById("search-options-form");
+  const searchOptionsForm = document.getElementById("search-options-form");
+  const valueOptionsForm = document.getElementById("value-options");
+  const businessOptionsForm = document.getElementById("business-options");
   const chartContainer = document.getElementById("chart-container");
   const searchResults = document.getElementsByClassName("search-results-hidden")[0];
   const resultsList = document.getElementById("results-list");
@@ -17,26 +19,29 @@ document.addEventListener('DOMContentLoaded', () => {
   let optionState = formInput(searchOptionsForm);
   let businessData = [];
 
-  async function renderSearch(e) {
-    e.preventDefault();
-    chartContainer.className = "chart-container-sharing";
-    searchResults.classList.remove("search-results-hidden");
-    searchResults.classList.add("search-results-revealed");
-
-    resultsList.innerHTML = '';
+  async function executeSearch() {
+    businessData = [];
     const searchParams = formInput(searchForm);
     const searchRequest = { searchParams, optionState };
-    chartPoints = [];
-
+  
     let response = await axios({
       method: 'post',
       url: '/search',
       data: searchRequest
     })
-
+  
     for (let i = 0; i < response.data.length; i++) {
       businessData.push(response.data[i]);
     }
+  }
+
+  function renderSearch() {
+    chartContainer.className = "chart-container-sharing";
+    searchResults.classList.remove("search-results-hidden");
+    searchResults.classList.add("search-results-revealed");
+
+    resultsList.innerHTML = '';
+    chartPoints = [];
 
     for (let i = 0; i < businessData.length; i++) {
       let business = businessData[i];
@@ -71,12 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
     yelpChart.options.scales.xAxes[0].ticks.max = maxDistance(chartPoints);
     yelpChart.update();
   };
+
+  async function runSearch() {
+    await executeSearch();
+    renderSearch();
+  }
   
-  searchForm.addEventListener("submit", async function(e) {
-    renderSearch(e);
+  searchForm.addEventListener("submit", e => {
+    e.preventDefault();
+    runSearch();
   });
 
-  searchOptionsForm.addEventListener("change", function(e) {
+  valueOptionsForm.addEventListener("change", e => {
+    e.preventDefault();
+    optionState = formInput(searchOptionsForm);
     let ratingOption = document.getElementById("rating-option");
     let priceOption = document.getElementById("price-option");
     if (!priceOption.checked) {
@@ -85,8 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       ratingOption.disabled = false;
     }
+    renderSearch();
+  });
+
+  businessOptionsForm.addEventListener("change", e => {
+    e.preventDefault();
     optionState = formInput(searchOptionsForm);
-    renderSearch(e);
+    runSearch();
   });
 });
       

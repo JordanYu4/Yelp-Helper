@@ -8,7 +8,6 @@ export const formInput = form => {
       inputs[input.value] = input.checked;
     }
   }
-  console.log(inputs);
   return inputs;
 };
 

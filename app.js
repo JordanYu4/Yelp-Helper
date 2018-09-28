@@ -17,7 +17,7 @@ app.post('/search', (request, response) => {
   let searchOptions = request.body.optionState;
   client.search(request.body.searchParams).then(result => {
     let businesses = result.jsonBody.businesses;
-    for (let i = 0; i <= 9; i++) {
+    for (let i = 0; i < businesses.length; i++) {
       let { name, 
             image_url, 
             url, 

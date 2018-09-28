@@ -17,7 +17,7 @@ const chartBuilder = chartPoints => {
           data: chartPoints,
           pointRadius: 5,
           pointStyle: "rectRounded",
-          pointHitRadius: 6,
+          pointHitRadius: 4,
           backgroundColor: "red",
           borderWidth: 1,
           borderColor: "red",
