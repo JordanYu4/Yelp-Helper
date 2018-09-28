@@ -36,13 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderSearch() {
-    chartContainer.className = "chart-container-sharing";
-    searchResults.classList.remove("search-results-hidden");
-    searchResults.classList.add("search-results-revealed");
-
     resultsList.innerHTML = '';
     chartPoints = [];
-
+    
     for (let i = 0; i < businessData.length; i++) {
       let business = businessData[i];
       let businessValue;
@@ -58,35 +54,38 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         businessValue = business.rating;
       }
-
+      
       let point = {
         x: business.distance,
         y: businessValue,
         url: business.url
       };
       chartPoints.push(point);
-
+      
       let listItem = listItemBuilder(business, i);
       resultsList.appendChild(listItem);
     }
-
+    
     yelpChart.data.datasets[0].data = chartPoints;
     yelpChart.data.datasets[0].businesses = businessData;
     yelpChart.options.scales.yAxes[0].ticks.min = minValue(chartPoints);
     yelpChart.options.scales.xAxes[0].ticks.max = maxDistance(chartPoints);
     yelpChart.update();
   };
-
+  
   async function runSearch() {
     await executeSearch();
     renderSearch();
+    chartContainer.className = "chart-container-sharing";
+    searchResults.classList.remove("search-results-hidden");
+    searchResults.classList.add("search-results-revealed");
   }
   
   searchForm.addEventListener("submit", e => {
     e.preventDefault();
     runSearch();
   });
-
+  
   valueOptionsForm.addEventListener("change", e => {
     e.preventDefault();
     optionState = formInput(searchOptionsForm);
