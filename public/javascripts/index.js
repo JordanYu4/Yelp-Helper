@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const yelpChart = chartBuilder(chartPoints);
 
   const optionState = formInput(searchOptionsForm);
+
+  async function executeSearch(e) => {
+    
+  };
   
   searchForm.addEventListener("submit", async function(e) {
     e.preventDefault();
@@ -24,13 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resultsList.innerHTML = '';
     const searchParams = formInput(searchForm); 
+    const searchRequest = { searchParams, optionState };
     let businessData = [];
     chartPoints = [];
 
     let response = await axios({
       method: 'post',
       url: '/search',
-      data: searchParams
+      data: searchRequest
     })
 
     for (let i = 0; i < response.data.length; i++) {
@@ -60,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     yelpChart.update();
   });
 
-  searchOptionsForm.addEventListener("change", function() {
+  searchOptionsForm.addEventListener("change", function(e) {
     
   });
 });

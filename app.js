@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/search', (request, response) => {
   let dataSet = [];
-  client.search(request.body).then(result => {
+  client.search(request.body.searchParams).then(result => {
     let businesses = result.jsonBody.businesses;
     for (let i = 0; i <= 9; i++) {
       let { name, 
