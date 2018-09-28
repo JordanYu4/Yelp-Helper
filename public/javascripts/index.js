@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
       businessData.push(response.data[i]);
     }
 
+    console.log(businessData);
+
     for (let i = 0; i < businessData.length; i++) {
       let business = businessData[i];
 

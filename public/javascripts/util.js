@@ -17,7 +17,7 @@ export const minValue = points => {
   let min = points[0].y;
   for (let i = 1; i < points.length; i++) {
     let value = points[i].y;
-    if (value < min) min = distance;
+    if (value < min) min = value;
   }
   return min === 0 ? 0 : Math.floor(min) - 1;
 };

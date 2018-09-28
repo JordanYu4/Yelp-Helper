@@ -7,15 +7,10 @@ const listItemBuilder = (business, itemId) => {
   itemBody.setAttribute("href", `${business.url}`);
   itemBody.setAttribute("target", "_blank");
   
-  // let linkPic = document.createElement("a");
-  // linkPic.setAttribute("href", `${business.url}`);
-  // linkPic.setAttribute("target", "_blank");
-  
   let photo = document.createElement("i");
   photo.setAttribute(
     "style", `background-image: url(${business.image_url})`
   );
-  // linkPic.appendChild(photo);
   
   itemBody.appendChild(photo);
   let itemTitle = document.createElement("h1");
