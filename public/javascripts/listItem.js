@@ -11,11 +11,18 @@ const listItemBuilder = (business, itemId) => {
   photo.setAttribute(
     "style", `background-image: url(${business.image_url})`
   );
+  let ratingStars = document.createElement("img");
+  ratingStars.className = "rating-stars";
+  let ratingString = business.rating.toString().replace('.', '');
+  ratingStars.setAttribute(
+    "src", require(`../assets/images/yelp_stars/stars_${ratingString}.png`)
+  );
   
   itemBody.appendChild(photo);
   let itemTitle = document.createElement("h1");
   itemTitle.appendChild(document.createTextNode(`${business.name}`));
   itemText.appendChild(itemTitle);
+  itemText.appendChild(ratingStars);
   itemText.appendChild(document.createTextNode(
     `Rating: ${business.rating} (${business.review_count} reviews)`));
   itemText.appendChild(document.createElement("br"));
