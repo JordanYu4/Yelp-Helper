@@ -4026,6 +4026,12 @@ input.submit-button:hover {
   margin-right: 10px;
 }
 
+.data-vis .results-list li .rating-stars {
+  padding: 4px 4px 4px 0;
+  max-width: 100px;
+  height: auto;
+}
+
 .data-vis .results-list li:hover {
   background: rgba(211, 35, 35, 0.8);
 }

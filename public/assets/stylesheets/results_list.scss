@@ -69,6 +69,13 @@
         margin-right: 10px;
       }
 
+      .rating-stars {
+        padding: 4px 4px 4px 0;
+        // max-height: 16px;
+        max-width: 100px;
+        height: auto;
+      }
+
       &:hover {
         background: rgba(211, 35, 35, 0.8);
         
