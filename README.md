@@ -1,6 +1,6 @@
 # YelpHelper
 
-[Live Demo](http://yelp-helper.herokuapp.com/)
+[Live Demo](https://yelp-helper.herokuapp.com/)
 
 YelpHelper uses the `Yelp Fusion` API and `Chart.js` to enable users to make faster decisions by visualizing the distance versus rating of businesses of interest. Users can search for a business by keyword or category as they would in [Yelp](https://yelp.com), and YelpHelper will display the top ten search results along with a chart plotting the search result ratings relative to the respective businesses' distance from the user's current location.
 
