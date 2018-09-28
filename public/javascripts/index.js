@@ -38,14 +38,23 @@ document.addEventListener('DOMContentLoaded', () => {
       businessData.push(response.data[i]);
     }
 
-    console.log(businessData);
-
     for (let i = 0; i < businessData.length; i++) {
       let business = businessData[i];
+      let businessValue;
+      let { ratingOption, priceOption } = optionState;
+      if (ratingOption && priceOption) {
+        businessValue = business.rating / business.price.length; 
+      } else if (ratingOption) {
+        businessValue = business.rating;
+      } else if (priceOption) {
+        businessValue = 5 - business.price.length;
+      } else {
+        businessValue = business.rating;
+      }
 
       let point = {
         x: business.distance,
-        y: business.rating,
+        y: businessValue,
         url: business.url
       };
       chartPoints.push(point);
@@ -66,6 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   searchOptionsForm.addEventListener("change", function(e) {
+    let ratingOption = document.getElementById("rating-option");
+    let priceOption = document.getElementById("price-option");
+    if (!priceOption.checked) {
+      ratingOption.checked = true;
+      ratingOption.disabled = true;
+    } else {
+      ratingOption.disabled = false;
+    }
     optionState = formInput(searchOptionsForm);
     renderSearch(e);
   });
