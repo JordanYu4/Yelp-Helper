@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultsList = document.getElementById("results-list");
   const yelpChart = chartBuilder(chartPoints);
 
-  const optionState = formInput(searchOptionsForm);
+  let optionState = formInput(searchOptionsForm);
 
-  async function executeSearch(e) {
+  async function renderSearch(e) {
     e.preventDefault();
     chartContainer.className = "chart-container-sharing";
     searchResults.classList.remove("search-results-hidden");
@@ -62,11 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   
   searchForm.addEventListener("submit", async function(e) {
-    executeSearch(e);
+    renderSearch(e);
   });
 
   searchOptionsForm.addEventListener("change", function(e) {
-    
+    optionState = formInput(searchOptionsForm);
+    renderSearch(e);
   });
 });
       

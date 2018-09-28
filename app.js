@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/search', (request, response) => {
   let dataSet = [];
+  let searchOptions = request.body.optionState;
   client.search(request.body.searchParams).then(result => {
     let businesses = result.jsonBody.businesses;
     for (let i = 0; i <= 9; i++) {
@@ -25,7 +26,6 @@ app.post('/search', (request, response) => {
             distance,
             is_closed, 
             review_count } = businesses[i];
-      // let business = businesses[i]; 
       let business = { name, 
                        image_url, 
                        url, 
@@ -34,8 +34,11 @@ app.post('/search', (request, response) => {
                        distance, 
                        is_closed,
                        review_count };
+      if (searchOptions.openNow && business.is_closed) continue;
+      if (!searchOptions[business.price]) continue;
       business.distance = ((business.distance / 1000) * 0.6213).toFixed(2);
       dataSet.push(business);
+      if (dataSet.length === 9) break;
     }
     response.send(dataSet);
   })
