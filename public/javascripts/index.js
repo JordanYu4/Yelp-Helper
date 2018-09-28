@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const yelpChart = chartBuilder(chartPoints);
 
   let optionState = formInput(searchOptionsForm);
+  let businessData = [];
 
   async function renderSearch(e) {
     e.preventDefault();
@@ -25,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     resultsList.innerHTML = '';
     const searchParams = formInput(searchForm);
     const searchRequest = { searchParams, optionState };
-    let businessData = [];
     chartPoints = [];
 
     let response = await axios({
@@ -44,10 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
       let { ratingOption, priceOption } = optionState;
       if (ratingOption && priceOption) {
         businessValue = business.rating / business.price.length; 
+        yelpChart.options.scales.yAxes[0].scaleLabel.labelString = 'Rating & Affordability';
       } else if (ratingOption) {
         businessValue = business.rating;
       } else if (priceOption) {
         businessValue = 5 - business.price.length;
+        yelpChart.options.scales.yAxes[0].scaleLabel.labelString = "Affordability";
       } else {
         businessValue = business.rating;
       }

@@ -61,7 +61,7 @@ const chartBuilder = chartPoints => {
             },
             scaleLabel: {
               display: true,
-              labelString: 'Value', 
+              labelString: 'Rating', 
               fontSize: 16,
               fontColor: 'rgb(90, 90, 90)',
               fontStyle: 'bold'
