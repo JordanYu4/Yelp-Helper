@@ -4013,7 +4013,7 @@ input.submit-button:hover {
   color: #fff;
 }
 
-.chart-options-form {
+.search-options-form {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -4024,34 +4024,45 @@ input.submit-button:hover {
   line-height: 1.2em;
 }
 
-.chart-options-form label {
+.search-options-form label {
   padding: 10px 15px 45px;
   background: rgba(211, 35, 35, 0.9);
   color: #fff;
+  padding: 15px 20px 15px;
   margin: 15px 0 0;
   border-radius: 3px;
   box-sizing: border-box;
 }
 
-.chart-options-form label.value-options {
+.search-options-form label.value-options {
   grid-column: 1 / 2;
 }
 
-.chart-options-form label.business-options {
+.search-options-form label.business-options {
   grid-column: 2 / 3;
 }
 
-.chart-options-form h3 {
+.search-options-form .search-options-list {
+  display: flex;
+}
+
+@media screen and (max-width: 920px) {
+  .search-options-form .search-options-list {
+    flex-direction: column;
+  }
+}
+
+.search-options-form h3 {
   font-weight: 700;
   margin-bottom: 0.8em;
 }
 
-.chart-options-form input:hover {
+.search-options-form input:hover {
   cursor: pointer;
 }
 
-.chart-options-form span {
-  margin-right: 15px;
+.search-options-form span {
+  margin-right: 10px;
 }
 
 

@@ -57,38 +57,78 @@
               <canvas id="yelpChart"></canvas>
             </div>
             <h2>Distance (mi)</h2>
-            <form action="/update-search" id="search-options-form" class="chart-options-form">
+            <form action="/update-search" id="search-options-form" class="search-options-form">
               <label for="value-factors">
                 <h3>Value options:</h3>
-                <input 
-                  type="checkbox" 
-                  name="value-factor" 
-                  value="rating"
-                  checked="checked"
-                >
-                <span>Rating</span>
-                <input 
-                  type="checkbox" 
-                  name="value-factor" 
-                  value="price"
-                >
-                <span>Price</span>
+                <div class="search-options-list">
+                  <section class="search-option">
+                    <input 
+                      type="checkbox" 
+                      name="value-factor" 
+                      value="rating"
+                      checked="checked"
+                    >
+                    <span>Rating</span>
+                  </section>
+                  <section class="search-option">
+                    <input 
+                      type="checkbox" 
+                      name="value-factor" 
+                      value="price"
+                    >
+                    <span>Price</span>
+                  </section>
+                </div>
               </label>
               <label for="business-options">
                 <h3>Business options:</h3>
-                <input 
-                  type="checkbox" 
-                  name="business-option" 
-                  value="openNow"
-                  checked="checked"
-                >
-                <span>Open now</span>
-                <input 
-                  type="checkbox" 
-                  name="business-option" 
-                  value="wifi"
-                >
-                <span>Wifi</span>
+                <div class="search-options-list">
+                  <section class="search-option">
+                    <input 
+                      type="checkbox" 
+                      name="business-option" 
+                      value="openNow"
+                      checked="checked"
+                    >
+                    <span>Open now</span>
+                  </section>
+                  <section class="search-option">
+                    <input 
+                      type="checkbox" 
+                      name="business-option" 
+                      value="$"
+                      checked="checked"
+                    >
+                    <span>$</span>
+                  </section>
+                  <section class="search-option">
+                    <input 
+                      type="checkbox" 
+                      name="business-option" 
+                      value="$$"
+                      checked="checked"
+                    >
+                    <span>$$</span>
+                  </section>
+                  <section class="search-option">
+                    <input 
+                      type="checkbox" 
+                      name="business-option" 
+                      value="$$$"
+                      checked="checked"
+                    >
+                    <span>$$$</span>
+                  </section>
+                  <section class="search-option">
+                    <input 
+                      type="checkbox" 
+                      name="business-option" 
+                      value="$$$$"
+                      checked="checked"
+                    >
+                    <span>$$$$</span>
+                  </section>
+                </div>
               </label>
             </form>
           </div>
