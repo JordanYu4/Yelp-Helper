@@ -16,18 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const optionState = formInput(searchOptionsForm);
 
-  async function executeSearch(e) => {
-    
-  };
-  
-  searchForm.addEventListener("submit", async function(e) {
+  async function executeSearch(e) {
     e.preventDefault();
     chartContainer.className = "chart-container-sharing";
     searchResults.classList.remove("search-results-hidden");
     searchResults.classList.add("search-results-revealed");
 
     resultsList.innerHTML = '';
-    const searchParams = formInput(searchForm); 
+    const searchParams = formInput(searchForm);
     const searchRequest = { searchParams, optionState };
     let businessData = [];
     chartPoints = [];
@@ -47,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < businessData.length; i++) {
       let business = businessData[i];
 
-      let point = { 
-        x: business.distance, 
-        y: business.rating, 
+      let point = {
+        x: business.distance,
+        y: business.rating,
         url: business.url
       };
       chartPoints.push(point);
@@ -63,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
     yelpChart.options.scales.yAxes[0].ticks.min = minValue(chartPoints);
     yelpChart.options.scales.xAxes[0].ticks.max = maxDistance(chartPoints);
     yelpChart.update();
+  };
+  
+  searchForm.addEventListener("submit", async function(e) {
+    executeSearch(e);
   });
 
   searchOptionsForm.addEventListener("change", function(e) {
