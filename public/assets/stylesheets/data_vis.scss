@@ -6,10 +6,11 @@
 
 .data-vis {
   width: 80vw;
+  max-height: 600px;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
-  padding: 0 15px 0;
+  padding: 0 20px 0;
   margin-bottom: 30px;
   justify-content: center;
   background: rgba(248, 249, 249, 1);
@@ -18,8 +19,20 @@
 
   @media screen and (max-width: 1160px) {
     width: 85vw;
+    max-height: none;
     flex-direction: column-reverse;
     align-items: center;
+  }
+
+  @media screen and (min-width: 1310px) {
+    max-height: 670px;
+  }
+
+  @media screen and (min-width: 1450px) {
+    max-height: 750px;
+  }
+  @media screen and (min-width: 1700px) {
+    max-height: 830px;
   }
 }
 

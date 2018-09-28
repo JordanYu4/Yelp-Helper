@@ -3869,10 +3869,11 @@ input.submit-button:hover {
 
 .data-vis {
   width: 80vw;
+  max-height: 600px;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
-  padding: 0 15px 0;
+  padding: 0 20px 0;
   margin-bottom: 30px;
   justify-content: center;
   background: #f8f9f9;
@@ -3883,8 +3884,27 @@ input.submit-button:hover {
 @media screen and (max-width: 1160px) {
   .data-vis {
     width: 85vw;
+    max-height: none;
     flex-direction: column-reverse;
     align-items: center;
+  }
+}
+
+@media screen and (min-width: 1310px) {
+  .data-vis {
+    max-height: 670px;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .data-vis {
+    max-height: 750px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .data-vis {
+    max-height: 830px;
   }
 }
 
@@ -3893,6 +3913,7 @@ input.submit-button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   box-sizing: border-box;
   color: #5a5a5a;
   transition: 0.5s;
@@ -3937,10 +3958,6 @@ input.submit-button:hover {
 
 .data-vis .search-results-revealed {
   width: 25%;
-  height: 100%;
-  display: flex;
-  flex-grow: 2;
-  flex-direction: column;
   transition: 0.5s;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -3963,6 +3980,7 @@ input.submit-button:hover {
 }
 
 .data-vis .results-list {
+  max-height: 100%;
   padding-right: 8px;
 }
 
@@ -4022,8 +4040,8 @@ input.submit-button:hover {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-gap: 1em;
-  padding: 0 15px 0;
-  margin: 0 15px 30px;
+  padding: 0 15px 15px;
+  margin: 0 15px 15px;
   box-sizing: border-box;
   line-height: 1.2em;
 }
