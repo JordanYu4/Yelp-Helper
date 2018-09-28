@@ -17,7 +17,7 @@ const listItemBuilder = (business, itemId) => {
   itemTitle.appendChild(document.createTextNode(`${business.name}`));
   itemText.appendChild(itemTitle);
   itemText.appendChild(document.createTextNode(
-    `Rating: ${business.rating}`));
+    `Rating: ${business.rating} (${business.review_count} reviews)`));
   itemText.appendChild(document.createElement("br"));
   itemText.appendChild(document.createTextNode(
     `Price: ${business.price ? business.price : 'unlisted'}`));

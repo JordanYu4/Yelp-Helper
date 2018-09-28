@@ -23,8 +23,17 @@ app.post('/search', (request, response) => {
             rating, 
             price,
             distance,
-            hours } = businesses[i]; 
-      let business = {name, image_url, url, rating, price, distance, hours};
+            is_closed, 
+            review_count } = businesses[i];
+      // let business = businesses[i]; 
+      let business = { name, 
+                       image_url, 
+                       url, 
+                       rating, 
+                       price, 
+                       distance, 
+                       is_closed,
+                       review_count };
       business.distance = ((business.distance / 1000) * 0.6213).toFixed(2);
       dataSet.push(business);
     }
