@@ -45,8 +45,7 @@ For frontend development hosting, Github pages was selected for its fast initial
 
 ## Future Features
 
+* Integrate Google Geolocation API to access user location more quickly 
 * Increase minimum distance if less than ten businesses are within the standard 25 mile range
-* Add "open now" search filter option
-* Vary point opacity according to rating
 * Replace `Yelp Fusion` with `Yelp GraphQL` API to optimize response efficiency
 * Replace `Chart.js` with `D3` to explore more sophisticated data visualizations
