@@ -32,7 +32,7 @@ const chartBuilder = chartPoints => {
       responsiveAnimationDuration: 0.5,
       layout: {
         padding: {
-          left: 10
+          left: 7
         }
       },
       onClick: navToBusiness,

@@ -3873,7 +3873,7 @@ input.submit-button:hover {
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
-  padding: 0 20px 0;
+  padding: 0 20px 0 15px;
   margin-bottom: 30px;
   justify-content: center;
   background: #f8f9f9;
@@ -3961,6 +3961,7 @@ input.submit-button:hover {
   transition: 0.5s;
   margin-top: 30px;
   margin-bottom: 30px;
+  padding-right: 5px;
   box-sizing: border-box;
   overflow: scroll;
   overflow-x: hidden;
@@ -3981,7 +3982,7 @@ input.submit-button:hover {
 
 .data-vis .results-list {
   max-height: 100%;
-  padding-right: 8px;
+  padding-right: 7px;
 }
 
 .data-vis .results-list li {
@@ -4046,7 +4047,7 @@ input.submit-button:hover {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-gap: 1em;
-  padding: 0 15px 15px;
+  padding: 0 13px 15px;
   margin: 0 15px 15px;
   box-sizing: border-box;
   line-height: 1.2em;

@@ -8,6 +8,7 @@
     transition: 0.5s;
     margin-top: 30px;
     margin-bottom: 30px;
+    padding-right: 5px;
     box-sizing: border-box;
     overflow: scroll;
     overflow-x: hidden;
@@ -26,7 +27,7 @@
   
   .results-list {
     max-height: 100%;
-    padding-right: 8px;
+    padding-right: 7px;
 
     li {
       display: flex;
