@@ -7,6 +7,12 @@
   margin: 0 15px 15px;
   box-sizing: border-box;
   line-height: 1.2em;
+
+  #disabled-option {
+    &:hover {
+      cursor: no-drop;
+    }
+  }
   
   label {
     padding: 10px 15px 45px;

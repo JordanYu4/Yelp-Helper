@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < response.data.length; i++) {
       businessData.push(response.data[i]);
     }
+
+    console.log(response);
   }
 
   function renderSearch() {

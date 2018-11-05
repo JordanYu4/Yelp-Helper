@@ -4053,6 +4053,10 @@ input.submit-button:hover {
   line-height: 1.2em;
 }
 
+.search-options-form #disabled-option:hover {
+  cursor: no-drop;
+}
+
 .search-options-form label {
   padding: 10px 15px 45px;
   background: rgba(211, 35, 35, 0.9);

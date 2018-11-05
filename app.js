@@ -23,8 +23,7 @@ app.post('/search', (request, response) => {
             url, 
             rating, 
             price,
-            distance,
-            is_closed, 
+            distance, 
             review_count } = businesses[i];
       let business = { name, 
                        image_url, 
@@ -34,11 +33,12 @@ app.post('/search', (request, response) => {
                        distance, 
                        is_closed,
                        review_count };
-      if (searchOptions.openNow && business.is_closed) continue;
+      business.open_now = businesses[i].hours[0].is_open_now;
+      if (searchOptions.openNow && !business.open_now) continue;
       if (!searchOptions[business.price]) continue;
       business.distance = ((business.distance / 1000) * 0.6213).toFixed(2);
       dataSet.push(business);
-      if (dataSet.length === 9) break;
+      if (dataSet.length === 10) break;
     }
     response.send(dataSet);
   })
