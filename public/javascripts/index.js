@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         yelpChart.options.scales.yAxes[0].scaleLabel.labelString = 'Rating & Affordability';
       } else if (ratingOption) {
         businessValue = business.rating;
+        yelpChart.options.scales.yAxes[0].scaleLabel.labelString = 'Rating';
       } else if (priceOption) {
         businessValue = 5 - business.price.length;
         yelpChart.options.scales.yAxes[0].scaleLabel.labelString = "Affordability";
