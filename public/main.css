@@ -4061,9 +4061,9 @@ input.submit-button:hover {
   padding: 10px 15px 45px;
   background: rgba(211, 35, 35, 0.9);
   color: #fff;
-  padding: 15px 20px 15px;
   margin: 15px 0 0;
   border-radius: 3px;
+  padding: 15px 20px 15px;
   box-sizing: border-box;
 }
 
