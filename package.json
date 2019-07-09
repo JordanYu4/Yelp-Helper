@@ -1,9 +1,9 @@
 {
-  "name": "test",
+  "name": "yelp-helper",
   "version": "1.0.0",
-  "description": "cors test",
+  "description": "Search data visualization for yelp, built with help from jonchaney's node-api-backend",
   "main": "app.js",
-  "repository": "https://github.com/jonchaney/node-api-backend.git",
+  "repository": "https://github.com/JordanYu4/Yelp-Helper",
   "license": "MIT",
   "directories": {
     "lib": "lib"

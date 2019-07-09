@@ -3732,7 +3732,7 @@ header .nav-links {
 
 .header-spacer {
   width: 100%;
-  height: 80px;
+  min-height: 80px;
 }
 
 main {
