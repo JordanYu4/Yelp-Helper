@@ -9,7 +9,7 @@
     "lib": "lib"
   },
   "engines": {
-    "node": ">=10.6.0"
+    "node": ">=10.13.0"
   },
   "scripts": {
     "build": "webpack -d --watch",
