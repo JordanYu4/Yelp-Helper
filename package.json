@@ -9,10 +9,11 @@
     "lib": "lib"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": "10.13.0"
   },
   "scripts": {
     "build": "webpack -d --watch",
+    "clean": "rm -f  public/bundle.js",
     "start": "node app.js",
     "server": "nodemon app.js",
     "start:debug": "DEBUG=* node app.js"
