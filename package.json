@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "webpack -d --watch",
+    "clean": "rm -f  public/bundle.js",
     "start": "node app.js",
     "server": "nodemon app.js",
     "start:debug": "DEBUG=* node app.js"
