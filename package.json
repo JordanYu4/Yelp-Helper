@@ -12,7 +12,7 @@
     "node": "10.13.0"
   },
   "scripts": {
-    "build": "webpack -d --watch",
+    "build": "webpack -d",
     "clean": "rm -f  public/bundle.js",
     "start": "node app.js",
     "server": "nodemon app.js",
