@@ -29,7 +29,7 @@
     "express": "^4.15.3",
     "file-loader": "^2.0.0",
     "fstream": ">=1.0.12",
-    "lodash": ">=4.17.11",
+    "lodash": ">=4.17.19",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
     "resolve-url-loader": "^2.3.0",
