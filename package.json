@@ -31,7 +31,7 @@
     "fstream": ">=1.0.12",
     "lodash": ">=4.17.21",
     "mini-css-extract-plugin": "^0.4.2",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.1",
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^7.1.0",
     "tar": ">=2.2.2",
