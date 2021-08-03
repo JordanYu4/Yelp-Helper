@@ -34,7 +34,7 @@
     "node-sass": "^4.14.1",
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^7.1.0",
-    "tar": ">=2.2.2",
+    "tar": ">=4.4.15",
     "webpack": "^5.43.0",
     "webpack-merge": "^4.1.4",
     "yelp-fusion": "^2.0.2"
