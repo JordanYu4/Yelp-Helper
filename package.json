@@ -31,10 +31,10 @@
     "fstream": ">=1.0.12",
     "lodash": ">=4.17.21",
     "mini-css-extract-plugin": "^0.4.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.1",
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^7.1.0",
-    "tar": ">=2.2.2",
+    "tar": "^6.1.11",
     "webpack": "^5.43.0",
     "webpack-merge": "^4.1.4",
     "yelp-fusion": "^2.0.2"
