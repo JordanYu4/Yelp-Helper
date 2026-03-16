@@ -26,7 +26,7 @@
     "body-parser": "^1.18.3",
     "chart.js": "^2.9.4",
     "css-loader": "^1.0.0",
-    "express": "^4.15.3",
+    "express": "^4.17.3",
     "file-loader": "^2.0.0",
     "fstream": ">=1.0.12",
     "lodash": ">=4.17.21",
